@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="palette-earthy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TrataMentes by João Goulart - Terapias e Massagens em Lisboa</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header com Navegação Completa -->
+    <header id="header">
+        <div class="header-container container">
+            <a href="index.html" class="logo">
+                <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" width="200" height="44">
+            </a>
+            <button class="nav-toggle">
+                ☰
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre Mim</a></li>
+                <li class="nav-item"><a href="/servicos.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="/contacto.html" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="#" class="btn open-booking-modal">Agendar Consulta</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Entre em Contacto</h1>
+            <p>Estou disponível para responder às suas perguntas e marcar uma hora que seja conveniente para si.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-intro">
+                <p>Tem alguma dúvida ou quer saber mais sobre as terapias? Preencha o formulário abaixo ou utilize os outros canais de contacto. Entrarei em contacto consigo o mais rapidamente possível.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Envie a sua mensagem</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome completo</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" class="form-label">Serviço de interesse</label>
+                            <select id="service" name="service" class="form-select">
+                                <option value="">-- Selecione uma opção --</option>
+                                <option value="massagem-terapeutica">Massagem Terapêutica</option>
+                                <option value="cranio-sacral">Terapia Crânio-Sacral</option>
+                                <option value="liberacao-miofascial">Terapia Visceral</option>
+                                <option value="liberacao-miofascial">Reflexologia</option>
+                                <option value="outro">Outros Serviços</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">A sua mensagem</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" required> 
+                                Concordo com a <a href="#" style="color: var(--accent);">Política de Privacidade</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="form-button">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Informações de Contacto</h3>
+                        <div class="contact-item">
+                            <i>📞</i>
+                            <div>
+                                <strong>Telefone:</strong><br>
+                                +351 937 543 312
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>✉️</i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                joao.goulart@tratamentes.pt
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>🕒</i>
+                            <div>
+                                <strong>Horário de Atendimento:</strong><br>
+                                Segunda a Domingo: 10h às 22h (mediante agendamento)
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="https://facebook.com/trata.mentes" class="social-link" title="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127c-.82-.088-1.643-.13-2.467-.127-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/trata.mentes" class="social-link" title="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/351937543312" class="social-link" title="WhatsApp">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/tratamentes/" class="social-link" title="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Formas de Pagamento</h3>
+                        <div class="contact-item">
+                            <i>💳</i>
+                            <div>
+                                Aceitamos MB Way, cartões de débito e crédito, e dinheiro.
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i>📝</i>
+                            <div>
+                                <strong>Política de Cancelamento:</strong><br>
+                                Cancelamentos com menos de 24h de antecedência estão sujeitos a cobrança de 50% do valor da sessão.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section">
+        <div class="container">
+            <h2 class="section-title">Locais de Atendimento</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.2727247617307!2d-9.154489484745422!3d38.72349417959783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19333496bf970f%3A0x4b4bdf34e5f28d0d!2sRua%20Braamcamp%2088%2C%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1620247884579!5m2!1spt-PT!2spt"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="location-info">
+                        <h3 class="location-name">Gabinete Braamcamp</h3>
+                        <p class="location-address">Rua Braamcamp 88, 3Esq<br>1250-050 Lisboa</p>
+                        
+                        <div class="business-hours">
+                            <h4 class="hours-title">Horários de Funcionamento</h4>
+                            <ul class="hours-list">
+                                <li class="hours-item">
+                                    <span class="day">Segunda-feira</span>
+                                    <span class="time">19h - 22h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Terça-feira</span>
+                                    <span class="time">19h - 22h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Quarta-feira</span>
+                                    <span class="time">19h - 22h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Quinta-feira</span>
+                                    <span class="time">19h - 22h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Sexta-feira</span>
+                                    <span class="time">19h - 22h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Sábado</span>
+                                    <span class="time">10h - 22h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Domingo</span>
+                                    <span class="time">10h - 22h</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://www.google.com/maps/dir//TrataMentes+-+Braamcamp+-+Espaço+de+Bem-Estar+e+Terapias+Holísticas+R.+Braamcamp+88+3Esq+1250-012+Lisboa/@38.7213834,-9.1526428,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecfacdde721a5:0xc246adeb8e5f2af4!2m2!1d-9.1526428!2d38.7213834?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" class="btn btn-secondary" target="_blank">Como Chegar</a>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.9268206777137!2d-9.139786484743761!3d38.7568921794598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19330dd87bf82b%3A0x834d02f3a89a3a4e!2sRua%20Jorge%20Cola%C3%A7o%2032A%2C%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1620247884579!5m2!1spt-PT!2spt"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="location-info">
+                        <h3 class="location-name">Gabinete Alvalade</h3>
+                        <p class="location-address">Rua Jorge Colaço, 32A<br>1700-253 Lisboa</p>
+                        
+                        <div class="business-hours">
+                            <h4 class="hours-title">Horários de Funcionamento</h4>
+                            <ul class="hours-list">
+                                <li class="hours-item">
+                                    <span class="day">Segunda-feira</span>
+                                    <span class="time">10h - 18h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Terça-feira</span>
+                                    <span class="time">10h - 18h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Quarta-feira</span>
+                                    <span class="time">10h - 18h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Quinta-feira</span>
+                                    <span class="time">10h - 18h</span>
+                                </li>
+                                <li class="hours-item">
+                                    <span class="day">Sexta-feira</span>
+                                    <span class="time">10h - 18h</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="https://www.google.com/maps/dir//R.+Jorge+Colaço+32a,+1700-253+Lisboa/@38.760429,-9.22149,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933b37859769f:0xd9bf86c4cf22a5ed!2m2!1d-9.139089!2d38.7604579?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D" class="btn btn-secondary" target="_blank">Como Chegar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Perguntas Frequentes sobre Consultas</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-question">Quanto tempo dura uma sessão de terapia?</h3>
+                <p class="faq-answer">A sessão dura em média entre 50 e 60 minutos. A primeira consulta pode ser um pouco mais longa (cerca de 75 minutos), uma vez que inclui uma avaliação mais completa e pormenorizada das suas necessidades. O tempo pode variar ligeiramente consoante o tratamento específico e as necessidades individuais.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">É necessário reservar com antecedência?</h3>
+                <p class="faq-answer">Recomenda-se que reserve a sua sessão com antecedência para garantir a disponibilidade. Pode reservar a sua sessão através do sistema de reservas online ou contactando-nos diretamente por telefone.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">O que devo vestir para as sessões?</h3>
+                <p class="faq-answer">No que respeita ao vestuário, é recomendável roupa confortável e leve. Consoante o tipo de terapia, permanecerá com a sua roupa ou poderá ser parcialmente coberta com toalhas, respeitando sempre o seu conforto e privacidade.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Os tratamentos são cobertos por seguro de saúde?</h3>
+                <p class="faq-answer">No que diz respeito à cobertura do seguro de saúde, é favor informar-se junto da sua seguradora, pois as apólices variam. Alguns planos de saúde e seguros cobrem as terapias manuais. Forneço recibos detalhados que podem ser usados para reembolso, dependendo dos termos da sua apólice de seguro.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Qual é a política de cancelamento?</h3>
+                <p class="faq-answer">Caso necessite cancelar ou reagendar a sua consulta, pedimos que o faça com pelo menos 24 horas de antecedência. Cancelamentos com menos de 24 horas de antecedência estão sujeitos a cobrança de 50% do valor da sessão. Esta política permite-nos gerir eficientemente a nossa agenda e garantir disponibilidade para todos os pacientes.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Como devo me preparar para a consulta?</h3>
+                <p class="faq-answer">Para maximizar os benefícios da sua sessão, recomendamos chegar 5-10 minutos antes para relaxar antes do tratamento. É útil trazer uma lista de questões ou preocupações específicas que gostaria de abordar. Evite refeições pesadas até 1-2 horas antes e, se possível, mantenha-se bem hidratado durante o dia.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Final -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Vamos recuperar a sua qualidade de vida?</h2>
+            <p class="cta-description">Agende a sua primeira consulta e dê o primeiro passo para um corpo em equilíbrio</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary open-booking-modal">Agende a sua Consulta</a>
+                <a href="#" class="btn btn-secondary">Conhecer Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer com Newsletter -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" class="mb-3" width="150" height="33">
+                    <p>Terapias manuais personalizadas para uma vida com mais equilíbrio e bem-estar.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="/index.html">Início</a></li>
+                        <li class="footer-link"><a href="/sobre.html">Sobre Mim</a></li>
+                        <li class="footer-link"><a href="/servicos.html">Serviços</a></li>
+                        <li class="footer-link"><a href="/blog.html">Blog</a></li>
+                        <li class="footer-link"><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <div class="contact-item">
+                        <i>📞</i>
+                        <span>+351 937 543 312</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>✉️</i>
+                        <span>joao.goulart@tratamentes.pt</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>🕒</i>
+                        <span>Seg - Dom: 10h às 22h</span>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba novidades e dicas de bem-estar diretamente no seu email.</p>
+                    <form class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Seu email para receber a newsletter</label>
+                        <input type="email" id="newsletter-email" placeholder="O seu melhor email" class="newsletter-input" aria-label="Seu email para receber a newsletter" />
+                        <button type="submit" class="newsletter-button">Subscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2001-2025 TrataMentes by João Goulart. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Seletor de Paletas -->
+    <section id="selectorPaletas">
+        <div class="palette-switcher">
+            <div class="palette-switcher-header">
+                <h4 class="palette-switcher-title">Escolha uma paleta de cores</h4>
+                <button class="palette-switcher-toggle">−</button>
+            </div>
+            <div class="palette-switcher-content">
+                <div class="palette-option" data-palette="earthy">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #694A38;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #D4B483;"></div>
+                        <div class="palette-preview-accent" style="background-color: #A37C40;"></div>
+                    </div>
+                    <span class="palette-name">Tons Terrosos</span>
+                </div>
+                <div class="palette-option" data-palette="therapeutic">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #006989;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E09F3E;"></div>
+                        <div class="palette-preview-accent" style="background-color: #9BC1BC;"></div>
+                    </div>
+                    <span class="palette-name">Terapêutico</span>
+                </div>
+                <div class="palette-option" data-palette="olive">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #606C38;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #DDA15E;"></div>
+                        <div class="palette-preview-accent" style="background-color: #BC6C25;"></div>
+                    </div>
+                    <span class="palette-name">Verde Oliva</span>
+                </div>
+                <div class="palette-option" data-palette="terracotta">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #457B9D;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E76F51;"></div>
+                        <div class="palette-preview-accent" style="background-color: #F4A261;"></div>
+                    </div>
+                    <span class="palette-name">Terracota</span>
+                </div>
+                <div class="palette-option" data-palette="coffee">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #5C4033;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E6CCB2;"></div>
+                        <div class="palette-preview-accent" style="background-color: #C7A17A;"></div>
+                    </div>
+                    <span class="palette-name">Café & Nata</span>
+                </div>
+                <div class="palette-option" data-palette="eucalyptus">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #2A403D;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #C17C74;"></div>
+                        <div class="palette-preview-accent" style="background-color: #E2B4BD;"></div>
+                    </div>
+                    <span class="palette-name">Eucalipto</span>
+                </div>
+                <div class="palette-option" data-palette="glamour">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #0A2342;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #D5AB55;"></div>
+                        <div class="palette-preview-accent" style="background-color: #BF9B6F;"></div>
+                    </div>
+                    <span class="palette-name">Glamour</span>
+                </div>
+                <div class="palette-option" data-palette="pastel">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #5B7DB1;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #F18805;"></div>
+                        <div class="palette-preview-accent" style="background-color: #E6AC8F;"></div>
+                    </div>
+                    <span class="palette-name">Pastéis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Scripts -->
+        <script src="/assets/js/script.js"></script>
+        <script src="/assets/js/booking-modal.js"></script>
+</body>
+
+</html>

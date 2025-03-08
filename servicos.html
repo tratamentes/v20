@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="palette-earthy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - TrataMentes by João Goulart - Terapias e Massagens em Lisboa</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        /* Estilos adicionais para a página de Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-benefits {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-image video {
+            transform: scale(1.05);
+        }
+
+        .benefits-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .benefits-list li::before {
+            content: "•";
+            color: var(--secondary);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .service-link {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .intro-services {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            box-shadow: 0 3px 10px var(--shadow);
+        }
+
+        .approach-section {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .approach-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .approach-item {
+            flex: 1;
+            min-width: 280px;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .approach-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            color: var(--dark);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .approach-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-section {
+            background-color: white;
+            padding: 4rem 0;
+        }
+
+        .accordion {
+            margin-top: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .accordion-item {
+            background-color: var(--light);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            color: var(--primary);
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        .accordion-icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon::before,
+        .accordion-icon::after {
+            content: '';
+            position: absolute;
+            background-color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon::before {
+            width: 2px;
+            height: 20px;
+            left: 9px;
+            top: 0;
+        }
+
+        .accordion-icon::after {
+            width: 20px;
+            height: 2px;
+            left: 0;
+            top: 9px;
+        }
+
+        .accordion-item.active .accordion-icon::before {
+            transform: rotate(90deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-body {
+            padding: 0 1.2rem 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header com Navegação Completa -->
+    <header id="header">
+        <div class="header-container container">
+            <a href="/index.html" class="logo">
+                <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" width="200" height="44">
+            </a>
+            <button class="nav-toggle">
+                ☰
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre Mim</a></li>
+                <li class="nav-item"><a href="/servicos.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="/contacto.html" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="#" class="btn open-booking-modal">Agendar Consulta</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Serviços Terapêuticos</h1>
+            <p>Conheça as terapias que ofereço para devolver equilíbrio ao seu corpo e bem-estar à sua vida</p>
+        </div>
+    </section>
+
+    <!-- Introdução aos Serviços -->
+    <section class="services-intro">
+        <div class="container">
+            <div class="intro-services">
+                <h2 class="section-title">Uma Abordagem Integrativa para o Seu Bem-Estar</h2>
+                <p>As terapias manuais que ofereço são baseadas na compreensão de que o corpo funciona como um sistema
+                    integrado, onde cada parte influencia o todo. Através de técnicas precisas e personalizadas,
+                    trabalho para restaurar o equilíbrio natural do corpo, promovendo a autorregulação e o alívio de
+                    dores e desconfortos.</p>
+                <p>Cada técnica é cuidadosamente selecionada e adaptada às suas necessidades específicas, respeitando a
+                    singularidade do seu corpo e da sua condição. Independentemente do serviço escolhido, meu
+                    compromisso é proporcionar um tratamento profissional, respeitoso e eficaz.</p>
+            </div>
+
+            <!-- Grade de Serviços -->
+            <div class="services-grid">
+                <!-- Massagem Terapêutica -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <video controls autoplay muted loop poster="/assets/img/posters/terapia-craniana-poster.webp"
+                            preload="none" width="100%" height="100%">
+                            <source src="/assets/video/terapia-craniana-extra-large.webm" type="video/webm">
+                            <source src="/assets/video/terapia-craniana-extra-large.mp4" type="video/mp4">
+                            <!-- Mensagem de fallback caso o navegador não suporte vídeo HTML5 -->
+                            Seu navegador não suporta a reprodução de vídeos HTML5.
+                        </video>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Massagem Terapêutica</h3>
+                        <p class="service-description">Uma abordagem personalizada que combina diferentes técnicas de
+                            massagem para aliviar tensões musculares, melhorar a circulação e promover relaxamento
+                            profundo. Adaptada às necessidades específicas de cada pessoa, a massagem terapêutica é
+                            eficaz para tratar dores musculares, stress e fadiga crônica.</p>
+
+                        <div class="service-benefits">
+                            <h4 class="benefits-title">Benefícios:</h4>
+                            <ul class="benefits-list">
+                                <li>Alívio de dores musculares e articulares</li>
+                                <li>Redução da tensão e do stress</li>
+                                <li>Melhoria da circulação sanguínea e linfática</li>
+                                <li>Promoção do relaxamento profundo</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-link">
+                            <a href="/servicos/massagem-terapeutica.html" class="btn btn-secondary">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terapia Crânio-Sacral -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <video controls autoplay muted loop poster="/assets/img/posters/terapia-craniana-poster.webp"
+                            preload="none" width="100%" height="100%">
+                            <source src="/assets/video/terapia-craniana-extra-large.webm" type="video/webm">
+                            <source src="/assets/video/terapia-craniana-extra-large.mp4" type="video/mp4">
+                            <!-- Mensagem de fallback caso o navegador não suporte vídeo HTML5 -->
+                            Seu navegador não suporta a reprodução de vídeos HTML5.
+                        </video>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Terapia Crânio-Sacral</h3>
+                        <p class="service-description">Uma abordagem suave e não invasiva que trabalha com o ritmo e o
+                            movimento do sistema crânio-sacral para liberar tensões e restrições. Esta terapia é
+                            particularmente eficaz para tratar problemas relacionados ao sistema nervoso, dores de
+                            cabeça, enxaquecas e stress crônico.</p>
+
+                        <div class="service-benefits">
+                            <h4 class="benefits-title">Benefícios:</h4>
+                            <ul class="benefits-list">
+                                <li>Alívio de dores de cabeça e enxaquecas</li>
+                                <li>Redução do stress e ansiedade</li>
+                                <li>Melhoria da qualidade do sono</li>
+                                <li>Promoção do relaxamento profundo do sistema nervoso</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-link">
+                            <a href="/servicos/terapia-cranio-sacral.html" class="btn btn-secondary">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terapia Visceral -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <video controls autoplay muted loop poster="/assets/img/posters/terapia-craniana-poster.webp"
+                            preload="none" width="100%" height="100%">
+                            <source src="/assets/video/terapia-craniana-extra-large.webm" type="video/webm">
+                            <source src="/assets/video/terapia-craniana-extra-large.mp4" type="video/mp4">
+                            <!-- Mensagem de fallback caso o navegador não suporte vídeo HTML5 -->
+                            Seu navegador não suporta a reprodução de vídeos HTML5.
+                        </video>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Terapia Visceral</h3>
+                        <p class="service-description">Uma abordagem terapêutica que busca restaurar o movimento natural
+                            dos órgãos internos através de técnicas manuais suaves. A terapia visceral é eficaz para
+                            tratar problemas digestivos, respiratórios e dores que podem ser originadas de disfunções
+                            nas vísceras.</p>
+
+                        <div class="service-benefits">
+                            <h4 class="benefits-title">Benefícios:</h4>
+                            <ul class="benefits-list">
+                                <li>Melhoria da função digestiva</li>
+                                <li>Alívio de dores abdominais crônicas</li>
+                                <li>Redução de desconfortos da região pélvica</li>
+                                <li>Suporte para o equilíbrio do sistema nervoso autônomo</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-link">
+                            <a href="/servicos/terapia-visceral.html" class="btn btn-secondary">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reflexologia com Vídeo e Imagem Placeholder -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <video controls autoplay muted loop poster="/assets/img/posters/terapia-craniana-poster.webp"
+                            preload="none" width="100%" height="100%">
+                            <source src="/assets/video/terapia-craniana-extra-large.webm" type="video/webm">
+                            <source src="/assets/video/terapia-craniana-extra-large.mp4" type="video/mp4">
+                            <!-- Mensagem de fallback caso o navegador não suporte vídeo HTML5 -->
+                            Seu navegador não suporta a reprodução de vídeos HTML5.
+                        </video>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Reflexologia</h3>
+                        <p class="service-description">Uma técnica terapêutica baseada na estimulação de pontos
+                            específicos nos pés, mãos ou orelhas que correspondem a diferentes órgãos e sistemas do
+                            corpo. A reflexologia ajuda a restaurar o equilíbrio energético e promove o funcionamento
+                            harmonioso de todo o organismo.</p>
+
+                        <div class="service-benefits">
+                            <h4 class="benefits-title">Benefícios:</h4>
+                            <ul class="benefits-list">
+                                <li>Redução do stress e ansiedade</li>
+                                <li>Melhoria da circulação sanguínea</li>
+                                <li>Estímulo da desintoxicação natural do corpo</li>
+                                <li>Promoção do relaxamento e bem-estar geral</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-link">
+                            <a href="/servicos/reflexologia.html" class="btn btn-secondary">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minha Abordagem -->
+    <section class="approach-section">
+        <div class="container">
+            <h2 class="section-title text-center">Como Funcionam Minhas Sessões</h2>
+            <div class="approach-content">
+                <div class="approach-item">
+                    <span class="approach-number">1</span>
+                    <h3 class="approach-title">Avaliação Inicial</h3>
+                    <p>Cada sessão começa com uma avaliação detalhada das suas necessidades e preocupações. Conversamos
+                        sobre seu histórico de saúde, estilo de vida e expectativas para o tratamento, estabelecendo as
+                        bases para um plano personalizado.</p>
+                </div>
+
+                <div class="approach-item">
+                    <span class="approach-number">2</span>
+                    <h3 class="approach-title">Plano Terapêutico</h3>
+                    <p>Com base na avaliação, desenvolvo um plano terapêutico personalizado que combina as técnicas mais
+                        adequadas para abordar suas necessidades específicas, visando resultados eficazes e duradouros.
+                    </p>
+                </div>
+
+                <div class="approach-item">
+                    <span class="approach-number">3</span>
+                    <h3 class="approach-title">Tratamento Integrativo</h3>
+                    <p>As sessões de tratamento utilizam uma abordagem integrativa, combinando diferentes técnicas
+                        terapêuticas para abordar não apenas os sintomas, mas também as causas subjacentes dos
+                        desequilíbrios.</p>
+                </div>
+
+                <div class="approach-item">
+                    <span class="approach-number">4</span>
+                    <h3 class="approach-title">Acompanhamento</h3>
+                    <p>Cada sessão inclui um momento de feedback e ajustes no plano conforme necessário. Além disso,
+                        ofereço orientações sobre hábitos e práticas que podem complementar o tratamento e promover o
+                        bem-estar contínuo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes sobre Serviços</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Qual serviço é mais indicado para o meu caso?</h3>
+                    <p class="faq-answer">A escolha do serviço mais adequado depende da sua condição específica, dos
+                        seus objetivos e das suas preferências pessoais. Na primeira consulta, efetuamos uma avaliação
+                        detalhada para identificar a abordagem mais eficaz para o seu caso. Muitas vezes, uma combinação
+                        de técnicas pode ser ideal para obter os melhores resultados.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quais são as diferenças entre as terapias oferecidas?</h3>
+                    <p class="faq-answer">Cada terapia tem um foco e abordagem específicos: a Massagem Terapêutica
+                        trabalha diretamente com os tecidos musculares; a Terapia Crânio-Sacral foca no sistema
+                        crânio-sacral e sistema nervoso central; a Terapia Visceral trabalha com os órgãos internos e
+                        suas conexões; e a Reflexologia estimula pontos reflexos nos pés que correspondem a diferentes
+                        órgãos e sistemas. Durante a consulta inicial, posso explicar em detalhe como cada técnica pode
+                        beneficiar o seu caso específico.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">As terapias são dolorosas?</h3>
+                    <p class="faq-answer">As técnicas que utilizo são geralmente suaves e não causam desconforto
+                        significativo. Em casos específicos, pode haver alguma sensibilidade em áreas de tensão ou dor
+                        pré-existente, mas trabalho sempre dentro dos limites de conforto de cada pessoa, ajustando a
+                        pressão e a abordagem conforme necessário. O objetivo é sempre o de proporcionar uma experiência
+                        terapêutica agradável e relaxante.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quantas sessões são necessárias para ver resultados?</h3>
+                    <p class="faq-answer">Cada pessoa reage de forma única ao tratamento. Alguns pacientes relatam um
+                        alívio imediato após a primeira sessão, enquanto condições mais crónicas podem exigir um plano
+                        de tratamento mais longo. Após a avaliação inicial, posso fornecer uma estimativa mais exata
+                        para o seu caso específico.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">É possível combinar diferentes terapias numa só sessão?</h3>
+                    <p class="faq-answer">Sim, a minha abordagem é integrativa. Frequentemente, combino diferentes
+                        técnicas numa mesma sessão para proporcionar o melhor resultado possível. O plano de tratamento
+                        é personalizado com base nas suas necessidades específicas e pode incluir elementos de várias
+                        modalidades terapêuticas.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quanto tempo devo esperar entre as sessões?</h3>
+                    <p class="faq-answer">O intervalo ideal entre sessões varia conforme a condição tratada e a resposta
+                        individual ao tratamento. Em casos agudos, sessões semanais podem ser recomendadas inicialmente.
+                        Para manutenção e prevenção, sessões quinzenais ou mensais podem ser mais adequadas. Após a
+                        avaliação inicial, desenvolvemos juntos um plano que melhor atenda às suas necessidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Vamos iniciar a sua jornada de recuperação?</h2>
+            <p class="cta-description">Agende a sua primeira consulta e dê o primeiro passo para uma vida com mais
+                equilíbrio e bem-estar</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary open-booking-modal">Agende a sua Consulta</a>
+                <a href="/servicos.html" class="btn btn-secondary">Conhecer Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer com Newsletter -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" class="mb-3" width="150" height="33">
+                    <p>Terapias manuais personalizadas para uma vida com mais equilíbrio e bem-estar.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="/index.html">Início</a></li>
+                        <li class="footer-link"><a href="/sobre.html">Sobre Mim</a></li>
+                        <li class="footer-link"><a href="/servicos.html">Serviços</a></li>
+                        <li class="footer-link"><a href="/blog.html">Blog</a></li>
+                        <li class="footer-link"><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <div class="contact-item">
+                        <i>📞</i>
+                        <span>+351 937 543 312</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>✉️</i>
+                        <span>joao.goulart@tratamentes.pt</span>
+                    </div>
+                    <div class="contact-item">
+                        <i>🕒</i>
+                        <span>Seg - Dom: 10h às 22h</span>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba novidades e dicas de bem-estar diretamente no seu email.</p>
+                    <form class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Seu email para receber a newsletter</label>
+                        <input type="email" id="newsletter-email" placeholder="O seu melhor email" class="newsletter-input" aria-label="Seu email para receber a newsletter" />
+                        <button type="submit" class="newsletter-button">Subscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2001-2025 TrataMentes by João Goulart. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Seletor de Paletas -->
+    <section id="selectorPaletas">
+        <div class="palette-switcher">
+            <div class="palette-switcher-header">
+                <h4 class="palette-switcher-title">Escolha uma paleta de cores</h4>
+                <button class="palette-switcher-toggle">−</button>
+            </div>
+            <div class="palette-switcher-content">
+                <div class="palette-option" data-palette="earthy">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #694A38;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #D4B483;"></div>
+                        <div class="palette-preview-accent" style="background-color: #A37C40;"></div>
+                    </div>
+                    <span class="palette-name">Tons Terrosos</span>
+                </div>
+                <div class="palette-option" data-palette="therapeutic">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #006989;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E09F3E;"></div>
+                        <div class="palette-preview-accent" style="background-color: #9BC1BC;"></div>
+                    </div>
+                    <span class="palette-name">Terapêutico</span>
+                </div>
+                <div class="palette-option" data-palette="olive">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #606C38;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #DDA15E;"></div>
+                        <div class="palette-preview-accent" style="background-color: #BC6C25;"></div>
+                    </div>
+                    <span class="palette-name">Verde Oliva</span>
+                </div>
+                <div class="palette-option" data-palette="terracotta">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #457B9D;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E76F51;"></div>
+                        <div class="palette-preview-accent" style="background-color: #F4A261;"></div>
+                    </div>
+                    <span class="palette-name">Terracota</span>
+                </div>
+                <div class="palette-option" data-palette="coffee">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #5C4033;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E6CCB2;"></div>
+                        <div class="palette-preview-accent" style="background-color: #C7A17A;"></div>
+                    </div>
+                    <span class="palette-name">Café & Nata</span>
+                </div>
+                <div class="palette-option" data-palette="eucalyptus">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #2A403D;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #C17C74;"></div>
+                        <div class="palette-preview-accent" style="background-color: #E2B4BD;"></div>
+                    </div>
+                    <span class="palette-name">Eucalipto</span>
+                </div>
+                <div class="palette-option" data-palette="glamour">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #0A2342;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #D5AB55;"></div>
+                        <div class="palette-preview-accent" style="background-color: #BF9B6F;"></div>
+                    </div>
+                    <span class="palette-name">Glamour</span>
+                </div>
+                <div class="palette-option" data-palette="pastel">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #5B7DB1;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #F18805;"></div>
+                        <div class="palette-preview-accent" style="background-color: #E6AC8F;"></div>
+                    </div>
+                    <span class="palette-name">Pastéis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Scripts -->
+            <script src="/assets/js/script.js"></script>
+            <script src="/assets/js/booking-modal.js"></script>
+</body>
+
+</html>

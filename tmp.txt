@@ -1,0 +1,192 @@
+/* 1: VIBRANTE & ENERGÉTICA*/
+        :root {
+            --primary: #2B59C3;      /* Azul vibrante */
+            --secondary: #FF9F1C;    /* Laranja quente */
+            --accent: #44CF6C;       /* Verde vivo */
+            --light: #F8F9FA;        /* Branco puro */
+            --dark: #2A2D34;         /* Quase preto */
+            --text: #33393F;         /* Texto escuro */
+            --shadow: rgba(0,0,0,0.1);
+        }  
+        
+        /* PALETA 2: MODERNA & RELAXANTE (Descomente para usar) */
+        :root {
+            --primary: #5D5FEF;      /* Roxo/azul moderno */
+            --secondary: #45EBA5;    /* Verde menta */
+            --accent: #FF7676;       /* Coral suave */
+            --light: #FFFFFF;        /* Branco puro */
+            --dark: #1E1E2C;         /* Azul escuro */
+            --text: #333333;         /* Texto escuro */
+            --shadow: rgba(93,95,239,0.1);
+        }
+        /* */
+        
+        /* PALETA 3: WELLNESS & SPA         */
+        :root {
+            --primary: #00A6A6;      /* Turquesa médio */
+            --secondary: #EFCA08;    /* Amarelo dourado */
+            --accent: #F26430;       /* Coral/laranja */
+            --light: #F8F8F8;        /* Branco quebrado */
+            --dark: #33658A;         /* Azul profundo */
+            --text: #2F4858;         /* Texto azulado */
+            --shadow: rgba(0,166,166,0.1);
+        }
+
+        
+        /* PALETA 4: NATURAL & HARMÔNICA         */
+        :root {
+            --primary: #638475;      /* Verde floresta */
+            --secondary: #D8B4A0;    /* Rosa terroso */
+            --accent: #90C2E7;       /* Azul céu */
+            --light: #FFFBF1;        /* Branco creme */
+            --dark: #433E0E;         /* Marrom escuro */
+            --text: #3F4238;         /* Texto verde escuro */
+            --shadow: rgba(99,132,117,0.1);
+        }
+
+
+
+
+/* PALETA 1: GLAMOUR DOURADO & AZUL MARINHO */
+        :root {
+            --primary: #0A2342;      /* Azul marinho profundo */
+            --secondary: #D5AB55;    /* Dourado elegante */
+            --accent: #BF9B6F;       /* Dourado bronzeado secundário */
+            --light: #F9F5ED;        /* Branco marfim suave */
+            --dark: #051729;         /* Azul quase preto */
+            --text: #333F4D;         /* Texto azul acinzentado */
+            --text-light: #F9F5ED;   /* Texto claro para fundos escuros */
+            --hover-primary: #0D2E58; /* Hover para primary */
+            --hover-secondary: #C69B45; /* Hover para secondary */
+            --hover-accent: #A88A60;  /* Hover para accent */
+            --shadow: rgba(10,35,66,0.15);
+        }
+        
+
+        
+        /* PALETA 2: PASTÉIS COM CONTRASTES */
+        :root {
+            --primary: #5B7DB1;      /* Azul pastel médio */
+            --secondary: #F18805;    /* Laranja vibrante (contraste) */
+            --accent: #E6AC8F;       /* Pêssego suave */
+            --light: #F7F5FB;        /* Branco lilás suave */
+            --dark: #38405F;         /* Azul escuro */
+            --text: #2E3047;         /* Texto azul profundo */
+            --text-light: #F7F5FB;   /* Texto claro para fundos escuros */
+            --hover-primary: #4A6A99; /* Hover para primary */
+            --hover-secondary: #D67700; /* Hover para secondary */
+            --hover-accent: #D49A7D;  /* Hover para accent */
+            --shadow: rgba(91,125,177,0.15);
+        }
+        
+        
+        /* PALETA 3: TERAPÊUTICO & PROFISSIONAL */
+        :root {
+            --primary: #006989;      /* Azul petróleo */
+            --secondary: #E09F3E;    /* Âmbar dourado */
+            --accent: #9BC1BC;       /* Verde-água suave */
+            --light: #FFFFFF;        /* Branco puro */
+            --dark: #27474E;         /* Verde escuro profundo */
+            --text: #333333;         /* Texto quase preto */
+            --text-light: #FFFFFF;   /* Texto claro para fundos escuros */
+            --hover-primary: #005670; /* Hover para primary */
+            --hover-secondary: #CC8F2D; /* Hover para secondary */
+            --hover-accent: #88B0AB;  /* Hover para accent */
+            --shadow: rgba(0,105,137,0.15);
+        }
+        
+        
+        /* PALETA 4: TONS TERROSOS PREMIUM */
+        :root {
+            --primary: #694A38;      /* Marrom amadeirado */
+            --secondary: #D4B483;    /* Bege dourado */
+            --accent: #A37C40;       /* Caramelo */
+            --light: #F9F6F0;        /* Branco creme */
+            --dark: #4A3728;         /* Marrom escuro */
+            --text: #3E3E3E;         /* Texto cinza escuro */
+            --text-light: #F9F6F0;   /* Texto claro para fundos escuros */
+            --hover-primary: #5A3F2F; /* Hover para primary */
+            --hover-secondary: #C4A474; /* Hover para secondary */
+            --hover-accent: #916E38;  /* Hover para accent */
+            --shadow: rgba(105,74,56,0.15);
+        }
+        
+        
+        /* PALETA 2: TERAPÊUTICO & PROFISSIONAL
+        :root {
+            --primary: #006989;      /* Azul petróleo */
+            --secondary: #E09F3E;    /* Âmbar dourado */
+            --accent: #9BC1BC;       /* Verde-água suave */
+            --light: #FFFFFF;        /* Branco puro */
+            --dark: #27474E;         /* Verde escuro profundo */
+            --text: #333333;         /* Texto quase preto */
+            --text-light: #FFFFFF;   /* Texto claro para fundos escuros */
+            --hover-primary: #005670; /* Hover para primary */
+            --hover-secondary: #CC8F2D; /* Hover para secondary */
+            --hover-accent: #88B0AB;  /* Hover para accent */
+            --shadow: rgba(0,105,137,0.15);
+        }
+        */
+        
+        /* PALETA 5: VERDE OLIVA & DOURADO */
+        :root {
+            --primary: #606C38;      /* Verde oliva escuro */
+            --secondary: #DDA15E;    /* Dourado suave */
+            --accent: #BC6C25;       /* Cobre/caramelo escuro */
+            --light: #FEFAE0;        /* Creme claro */
+            --dark: #283618;         /* Verde muito escuro */
+            --text: #333333;         /* Texto escuro */
+            --text-light: #FEFAE0;   /* Texto claro para fundos escuros */
+            --hover-primary: #4E5A2F; /* Hover para primary */
+            --hover-secondary: #CB9249; /* Hover para secondary */
+            --hover-accent: #A65D1E;  /* Hover para accent */
+            --shadow: rgba(96,108,56,0.15);
+        }
+        
+        /* PALETA 6: TERRACOTA & AZUL
+        :root {
+            --primary: #457B9D;      /* Azul sereno médio */
+            --secondary: #E76F51;    /* Terracota */
+            --accent: #F4A261;       /* Pêssego/ocre */
+            --light: #F1FAEE;        /* Branco esverdeado claro */
+            --dark: #1D3557;         /* Azul escuro */
+            --text: #2B2D42;         /* Texto azul acinzentado */
+            --text-light: #F1FAEE;   /* Texto claro para fundos escuros */
+            --hover-primary: #3A6A88; /* Hover para primary */
+            --hover-secondary: #D15941; /* Hover para secondary */
+            --hover-accent: #E09151;  /* Hover para accent */
+            --shadow: rgba(69,123,157,0.15);
+        }
+        */
+        
+        /* PALETA 7: CAFÉ & NATA
+        :root {
+            --primary: #5C4033;      /* Marrom café */
+            --secondary: #E6CCB2;    /* Bege claro/nata */
+            --accent: #C7A17A;       /* Caramelo médio */
+            --light: #FFF8F0;        /* Branco rosado */
+            --dark: #3A2921;         /* Marrom escuro */
+            --text: #3E3E3E;         /* Texto quase preto */
+            --text-light: #FFF8F0;   /* Texto claro para fundos escuros */
+            --hover-primary: #4D3629; /* Hover para primary */
+            --hover-secondary: #D6BCA2; /* Hover para secondary */
+            --hover-accent: #B7916A;  /* Hover para accent */
+            --shadow: rgba(92,64,51,0.15);
+        }
+        */
+        
+        /* PALETA 8: VERDE EUCALIPTO & COBRE
+        :root {
+            --primary: #2A403D;      /* Verde eucalipto escuro */
+            --secondary: #C17C74;    /* Cobre rosado */
+            --accent: #E2B4BD;       /* Rosa antigo suave */
+            --light: #F5F1ED;        /* Branco suave */
+            --dark: #22302E;         /* Verde quase preto */
+            --text: #333333;         /* Texto escuro */
+            --text-light: #F5F1ED;   /* Texto claro para fundos escuros */
+            --hover-primary: #233532; /* Hover para primary */
+            --hover-secondary: #AD6D65; /* Hover para secondary */
+            --hover-accent: #D0A2AB;  /* Hover para accent */
+            --shadow: rgba(42,64,61,0.15);
+        }
+        */

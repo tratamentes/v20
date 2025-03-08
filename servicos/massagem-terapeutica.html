@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="palette-earthy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massagem Terapêutica - TrataMentes by João Goulart - Terapias em Lisboa</title>
+    <meta name="description"
+        content="Massagem terapêutica personalizada em Lisboa para alívio de dores musculares, redução de tensão e promoção do bem-estar. Profissional com mais de 20 anos de experiência.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <!-- link rel="stylesheet" href="/assets/css/style.css" -->
+    <style>
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-top: 1.8rem;
+            margin-bottom: 1.2rem
+        }
+
+        .footer-links,
+        .hours-list,
+        .info-list,
+        .nav-menu {
+            list-style: none
+        }
+
+        .faq-answer,
+        .faq-item,
+        .hero,
+        .intro-image,
+        .location-card,
+        .service-hero,
+        .service-video {
+            overflow: hidden
+        }
+
+        .action-card,
+        .booking-fallback,
+        .contact-intro,
+        .cta,
+        .footer-bottom,
+        .hero,
+        .page-header,
+        .palette-name,
+        .testimonial,
+        .testimonial-slide,
+        .text-center {
+            text-align: center
+        }
+
+        @media (width <=768px) {
+            body {
+                font-size: 16px
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right .3s;
+                padding: 4rem 2rem 2rem;
+                z-index: 999
+            }
+
+            .nav-menu.active {
+                right: 0
+            }
+
+            .nav-item {
+                margin: 1rem 0;
+                width: 100%;
+                text-align: center
+            }
+
+            .nav-link {
+                display: block;
+                padding: .8rem 0;
+                width: 100%
+            }
+
+            .nav-item .btn {
+                display: block;
+                margin-top: 1rem;
+                width: 100%;
+                text-align: center
+            }
+
+            .nav-toggle {
+                display: block;
+                z-index: 1000
+            }
+
+            .nav-menu.active::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0 0 0 / 50%);
+                z-index: -1
+            }
+
+            .hero-title {
+                font-size: 2.2rem
+            }
+
+            .page-title {
+                font-size: 2rem
+            }
+
+            .contact-grid,
+            .footer-container,
+            .locations-grid {
+                grid-template-columns: 1fr
+            }
+
+            .footer-newsletter {
+                margin-top: 2rem
+            }
+
+            .newsletter-form {
+                max-width: 100%
+            }
+
+            .modal-content {
+                margin: 20px auto;
+                width: 95%
+            }
+
+            .benefit-card,
+            .info-card {
+                padding: 1.5rem
+            }
+
+            .action-card {
+                position: relative;
+                top: auto;
+                margin-bottom: 2rem;
+                background-color: #fff
+            }
+
+            .service-hero-title {
+                font-size: 1.8rem
+            }
+
+            .service-hero-description {
+                font-size: 1.1rem
+            }
+
+            /* Ajustar a linha vertical central */
+            .process-steps::before {
+                left: 24px;
+                /* Centralizar com os números */
+                width: 2px;
+                /* Definir a largura da linha */
+            }
+
+            /* Ajustar o container dos passos */
+            .process-step {
+                flex-direction: row;
+                /* Manter direção em linha para layout mobile */
+                padding-left: 0;
+                margin-bottom: 2.5rem;
+                /* Mais espaço entre os itens */
+                align-items: flex-start;
+                /* Alinhar no topo */
+            }
+
+            /* Ajustar os números dos passos */
+            .step-number {
+                position: relative;
+                left: 0;
+                margin-right: 16px;
+                /* Espaço entre o número e o conteúdo */
+                transform: none;
+                width: 48px;
+                height: 48px;
+                min-width: 48px;
+                /* Garantir que mantenha a largura */
+                z-index: 2;
+                /* Acima da linha */
+            }
+
+            /* Ajustar o container de conteúdo */
+            .step-content {
+                flex: 1;
+                width: auto;
+                /* Permitir que ocupe o espaço disponível */
+                margin-left: 0 !important;
+                /* Remover margem definida inline */
+                padding: 1.5rem;
+                /* Padding interno consistente */
+            }
+
+            /* Ajustar título e texto para melhor legibilidade em mobile */
+            .step-title {
+                font-size: 1.1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .step-content p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+
+        .footer-link a,
+        .nav-link {
+            text-decoration: none;
+            transition: color .3s
+        }
+
+        .logo,
+        .nav-toggle {
+            color: var(--light);
+            font-size: 1.5rem
+        }
+
+        @media (width >=769px) and (width <=1024px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem
+            }
+
+            .process-steps {
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .step-content {
+                width: 42%;
+                padding: 1.5rem;
+            }
+        }
+
+        @media (width >=1025px) {
+            .footer-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem
+            }
+        }
+
+        @media (width >=1400px) {
+            body {
+                font-size: 20px
+            }
+
+            .container {
+                max-width: 1320px
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-size: 18px;
+            font-family: Montserrat, sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background-color: var(--light)
+        }
+
+        .logo,
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Playfair Display", serif
+        }
+
+        .intro-description,
+        p {
+            margin-bottom: 1.5rem
+        }
+
+        img {
+            max-width: 100%;
+            height: auto
+        }
+
+        section {
+            padding: 4rem 0
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            transition: background-color .3s
+        }
+
+        header.scrolled {
+            background-color: var(--primary);
+            box-shadow: 0 2px 10px rgb(0 0 0 / 10%)
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem
+        }
+
+        .logo {
+            font-weight: 700;
+            text-decoration: none
+        }
+
+        .logo img {
+            height: 40px
+        }
+
+        .nav-toggle {
+            display: none;
+            background: 0 0;
+            border: 0;
+            cursor: pointer
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center
+        }
+
+        .nav-item {
+            margin: 0 .5rem
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            padding: 0 1rem;
+            font-weight: 500
+        }
+
+        .intro-link::after,
+        .location-card,
+        .value-item {
+            transition: transform .3s
+        }
+
+        .footer-link a:hover,
+        .modal-close:hover,
+        .nav-link:hover {
+            color: var(--secondary)
+        }
+
+        .hero {
+            background-color: var(--primary);
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .6
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--light);
+            max-width: 800px;
+            padding: 2rem
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300
+        }
+
+        .author-name,
+        .hours-title,
+        .intro-link {
+            font-weight: 600
+        }
+
+        .intro {
+            background-color: #fff
+        }
+
+        .intro-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem
+        }
+
+        .intro-image {
+            flex: 1;
+            min-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px var(--shadow)
+        }
+
+        .contact-card,
+        .contact-form-container,
+        .location-card,
+        .service-video,
+        .testimonial-card {
+            box-shadow: 0 5px 15px var(--shadow)
+        }
+
+        .intro-text,
+        .service-content {
+            flex: 2;
+            min-width: 300px
+        }
+
+        .intro-title {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem
+        }
+
+        .intro-link {
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center
+        }
+
+        .intro-link::after {
+            content: "→";
+            margin-left: .5rem
+        }
+
+        .testimonial-text::after,
+        .testimonial-text::before {
+            content: "\201D";
+            font-size: 3rem;
+            font-family: Georgia, serif;
+            color: var(--secondary);
+            opacity: .5;
+            position: absolute
+        }
+
+        .intro-link:hover::after {
+            transform: translateX(5px)
+        }
+
+        .value-prop {
+            background-color: var(--primary);
+            color: var(--light)
+        }
+
+        .value-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem
+        }
+
+        .value-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            padding: 2rem;
+            background-color: rgb(255 255 255 / 5%);
+            border-radius: 8px;
+            backdrop-filter: blur(5px)
+        }
+
+        .benefit-card:hover,
+        .location-card:hover,
+        .value-item:hover {
+            transform: translateY(-5px)
+        }
+
+        .value-item i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 1rem
+        }
+
+        .value-title {
+            font-size: 1.2rem;
+            margin-bottom: .5rem
+        }
+
+        .testimonial {
+            background-color: #fff
+        }
+
+        .locations,
+        .testimonial-card {
+            background-color: var(--light)
+        }
+
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 8px
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover
+        }
+
+        .author-title {
+            font-size: .9rem;
+            opacity: .7
+        }
+
+        .testimonial-text::before {
+            top: -20px;
+            left: -10px
+        }
+
+        .locations-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            gap: 2rem
+        }
+
+        .location-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            border-radius: 8px
+        }
+
+        .location-map {
+            height: 300px;
+            background-color: #eee
+        }
+
+        .booking-iframe,
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0
+        }
+
+        .location-info {
+            padding: 1.5rem
+        }
+
+        .location-name {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: .5rem
+        }
+
+        .footer-links li,
+        .footer-nav h4,
+        .footer-newsletter p,
+        .location-address {
+            margin-bottom: 1rem
+        }
+
+        .business-hours {
+            margin-top: 1.5rem
+        }
+
+        .hours-title {
+            margin-bottom: .5rem;
+            color: var(--primary)
+        }
+
+        .cta,
+        footer {
+            color: var(--light)
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: .3rem 0;
+            border-bottom: 1px dashed #ddd
+        }
+
+        .hours-item:last-child {
+            border-bottom: none
+        }
+
+        .day {
+            font-weight: 500
+        }
+
+        .cta {
+            background-color: var(--primary);
+            padding: 4rem 0
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem
+        }
+
+        .cta-description {
+            max-width: 600px;
+            margin: 0 auto 2rem
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center
+        }
+
+        .btn {
+            display: inline-block;
+            padding: .8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform .3s, background-color .3s;
+            text-decoration: none;
+            background-color: var(--secondary);
+            color: var(--dark)
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--hover-secondary)
+        }
+
+        .btn-primary,
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            color: var(--dark)
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary)
+        }
+
+        footer {
+            background-color: var(--dark);
+            padding: 3rem 0
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem
+        }
+
+        .footer-contact,
+        .footer-logo {
+            flex: 1;
+            min-width: 200px
+        }
+
+        .footer-nav {
+            flex: 1;
+            min-width: 150px
+        }
+
+        .footer-link {
+            margin-bottom: .5rem
+        }
+
+        .footer-link a {
+            color: #ccc
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: .8rem
+        }
+
+        .contact-item i {
+            min-width: 24px;
+            margin-right: .5rem;
+            color: var(--secondary)
+        }
+
+        .footer-newsletter {
+            flex: 1;
+            min-width: 250px
+        }
+
+        .footer-newsletter h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem
+        }
+
+        .newsletter-input {
+            padding: .8rem;
+            border: 0;
+            border-radius: 4px;
+            background-color: rgb(255 255 255 / 10%);
+            color: var(--text-light)
+        }
+
+        .newsletter-input::placeholder {
+            color: rgb(255 255 255 / 70%)
+        }
+
+        .newsletter-button {
+            padding: .8rem;
+            border: 0;
+            border-radius: 4px;
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color .3s
+        }
+
+        .newsletter-button:hover {
+            background-color: var(--hover-secondary)
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid;
+            font-size: .9rem;
+            opacity: .7
+        }
+
+        .page-header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 7rem 0 3rem
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem
+        }
+
+        .contact-intro {
+            max-width: 700px;
+            margin: 0 auto 3rem
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem
+        }
+
+        .contact-form-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 2rem
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column
+        }
+
+        .form-label {
+            margin-bottom: .5rem;
+            font-weight: 500
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            padding: .8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Montserrat, sans-serif;
+            transition: border-color .3s
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--accent);
+            outline: 0
+        }
+
+        .form-button {
+            background-color: var(--primary);
+            color: var(--text-light);
+            border: 0;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color .3s
+        }
+
+        .contact-card-title,
+        .info-card-title {
+            border-bottom: 2px solid var(--secondary)
+        }
+
+        .form-button:hover {
+            background-color: var(--hover-primary)
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem
+        }
+
+        .contact-card-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: .5rem
+        }
+
+        .service-hero,
+        .social-link {
+            background-color: var(--primary);
+            color: var(--text-light)
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: background-color .3s, transform .3s
+        }
+
+        .info-card,
+        .service-video {
+            border-radius: 8px;
+            margin-bottom: 2rem
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px)
+        }
+
+        .service-hero {
+            position: relative;
+            padding: 8rem 0 4rem
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/assets/img/posters/terapia-craniana-poster-comp.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: .3;
+            z-index: 0
+        }
+
+        .service-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .benefits-grid,
+        .service-details,
+        .service-sidebar .info-card:first-of-type {
+            margin-top: 2.5rem
+        }
+
+        .service-hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem
+        }
+
+        .service-hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.6
+        }
+
+        .service-overview {
+            padding: 4rem 0;
+            background-color: #fff
+        }
+
+        .action-card,
+        .benefits-section,
+        .info-card {
+            background-color: var(--light)
+        }
+
+        .service-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem
+        }
+
+        .service-sidebar {
+            flex: 1;
+            min-width: 280px
+        }
+
+        .service-video video {
+            width: 100%;
+            display: block
+        }
+
+        .info-card {
+            padding: 1.8rem;
+            box-shadow: 0 3px 10px var(--shadow)
+        }
+
+        .info-card-title {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            padding-bottom: .8rem;
+            font-size: 1.3rem
+        }
+
+        .info-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.8rem;
+            position: relative
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: .5rem;
+            display: block
+        }
+
+        .price-note {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: .8
+        }
+
+        .action-card {
+            position: sticky;
+            top: 100px;
+            border-radius: 8px;
+            padding: 1.8rem;
+            box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+            z-index: 10;
+            border: 1px solid
+        }
+
+        .palette-dark .action-card,
+        .palette-glamour .action-card {
+            background-color: #fff;
+            border: 1px solid
+        }
+
+        .benefits-section {
+            padding: 4rem 0
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem
+        }
+
+        .benefit-card {
+            background-color: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform .3s
+        }
+
+        .faq-item,
+        .step-content {
+            box-shadow: 0 3px 10px var(--shadow)
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.2rem
+        }
+
+        .benefit-title {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem
+        }
+
+        .process-section,
+        .testimonials-section {
+            padding: 4.5rem 0;
+            background-color: #fff
+        }
+
+        .process-steps::before,
+        .step-number {
+            background-color: var(--secondary);
+            left: 50%
+        }
+
+        .process-steps {
+            margin-top: 3.5rem;
+            position: relative
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            opacity: .3
+        }
+
+        .process-step {
+            display: flex;
+            margin-bottom: 3.5rem;
+            position: relative
+        }
+
+        .step-number {
+            color: var(--dark);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            position: absolute;
+            transform: translateX(-50%);
+            z-index: 1
+        }
+
+        .faq-section,
+        .step-content {
+            background-color: var(--light)
+        }
+
+        .client-name,
+        .faq-question,
+        .step-title {
+            color: var(--primary)
+        }
+
+        .faq-question,
+        .modal-header {
+            justify-content: space-between
+        }
+
+        .step-content {
+            width: 45%;
+            padding: 1.8rem;
+            border-radius: 8px
+        }
+
+        .process-step:nth-child(odd) .step-content {
+            margin-right: auto
+        }
+
+        .process-step:nth-child(2n) .step-content {
+            margin-left: auto
+        }
+
+        .step-title {
+            margin-bottom: 1rem;
+            font-size: 1.3rem
+        }
+
+        .faq-section {
+            padding: 4.5rem 0
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 2.5rem auto 0
+        }
+
+        .faq-item {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            background-color: rgb(0 0 0 / 2%);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color .3s;
+            font-size: 1.1rem
+        }
+
+        .faq-question:hover {
+            background-color: rgb(0 0 0 / 4%)
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            transition: max-height .3s, padding .3s
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px
+        }
+
+        .faq-icon {
+            width: 22px;
+            height: 22px;
+            position: relative;
+            transition: transform .3s
+        }
+
+        .faq-icon::after,
+        .faq-icon::before {
+            content: '';
+            position: absolute;
+            background-color: var(--primary);
+            transition: transform .3s
+        }
+
+        .faq-icon::before {
+            width: 2px;
+            height: 22px;
+            left: 10px;
+            top: 0
+        }
+
+        .faq-icon::after {
+            width: 22px;
+            height: 2px;
+            left: 0;
+            top: 10px
+        }
+
+        .faq-item.active .faq-icon::before {
+            transform: rotate(90deg)
+        }
+
+        .testimonials-slider {
+            margin-top: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden
+        }
+
+        .testimonial-slide {
+            background-color: var(--light);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow)
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 1.8rem;
+            position: relative;
+            line-height: 1.7
+        }
+
+        .client-name {
+            font-weight: 600;
+            font-size: 1.2rem
+        }
+
+        .client-note {
+            font-size: 1rem;
+            opacity: .7
+        }
+
+        /* Estilos para compactar o footer */
+        footer {
+            padding: 2rem 0 1.5rem;
+            /* Reduzir o padding vertical */
+            font-size: 0.9rem;
+            /* Fonte um pouco menor para todo o footer */
+        }
+
+        /* Reduzir o espaçamento entre os elementos */
+        .footer-container {
+            gap: 1.5rem;
+            /* Menor espaçamento entre as colunas */
+        }
+
+        /* Ajustar os títulos H3 no footer */
+        footer h3 {
+            font-size: 1.1rem;
+            /* Títulos menores */
+            margin-bottom: 0.7rem;
+            /* Menos espaço abaixo dos títulos */
+        }
+
+        /* Ajustar os espaçamentos das listas */
+        .footer-links li {
+            margin-bottom: 0.4rem;
+            /* Menos espaço entre itens de menu */
+        }
+
+        /* Ajustar os itens de contato */
+        .contact-item {
+            margin-bottom: 0.5rem;
+            /* Menos espaço entre informações de contato */
+        }
+
+        /* Reduzir espaçamento no formulário de newsletter */
+        .newsletter-form {
+            gap: 0.4rem;
+            /* Menor espaço entre input e botão */
+        }
+
+        .newsletter-input,
+        .newsletter-button {
+            padding: 0.6rem 0.8rem;
+            /* Input e botão menos altos */
+        }
+
+        /* Menor espaçamento para o rodapé de copyright */
+        .footer-bottom {
+            margin-top: 1.5rem;
+            /* Menos espaço antes do copyright */
+            font-size: 0.85rem;
+            /* Fonte ainda menor para o copyright */
+        }
+
+        /* Ajustes para a descrição sob o logo */
+        .footer-logo p {
+            font-size: 0.9rem;
+            /* Texto descritivo um pouco menor */
+            margin-top: 0.5rem;
+            /* Menos espaço após o logo */
+        }
+
+        .booking-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0 / 70%);
+            z-index: 1000;
+            overflow-y: auto
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 0;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+            overflow: hidden
+        }
+
+        .modal-header {
+            padding: 1.2rem 1.8rem;
+            background-color: var(--primary);
+            color: var(--text-light);
+            display: flex;
+            align-items: center
+        }
+
+        .modal-title {
+            margin: 0;
+            font-size: 1.6rem
+        }
+
+        .modal-close {
+            background: 0 0;
+            border: 0;
+            color: var(--text-light);
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color .3s
+        }
+
+        .modal-body {
+            height: 600px
+        }
+
+        .booking-fallback {
+            padding: 2.5rem;
+            font-size: 1.1rem
+        }
+
+        .palette-switcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+            padding: 15px;
+            z-index: 9999;
+            max-width: 300px;
+            display: block !important
+        }
+
+        .palette-switcher-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px
+        }
+
+        .palette-switcher-title {
+            font-weight: 600;
+            margin: 0
+        }
+
+        .palette-switcher-toggle {
+            background: 0 0;
+            border: 0;
+            cursor: pointer;
+            font-size: 1.2rem
+        }
+
+        .palette-switcher-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px
+        }
+
+        .palette-switcher.collapsed .palette-switcher-content {
+            display: none
+        }
+
+        .palette-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background-color .2s
+        }
+
+        .palette-option:hover {
+            background-color: #f0f0f0
+        }
+
+        .palette-preview {
+            display: flex;
+            width: 100%;
+            height: 25px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 5px
+        }
+
+        .palette-preview-accent,
+        .palette-preview-primary,
+        .palette-preview-secondary {
+            flex: 1
+        }
+
+        .palette-name {
+            font-size: 12px
+        }
+
+        .palette-glamour {
+            --primary: #0A2342;
+            --secondary: #D5AB55;
+            --accent: #BF9B6F;
+            --light: #F9F5ED;
+            --dark: #051729;
+            --text: #333F4D;
+            --text-light: #F9F5ED;
+            --hover-primary: #0D2E58;
+            --hover-secondary: #C69B45;
+            --hover-accent: #A88A60;
+            --shadow: rgb(10 35 66 / 15%)
+        }
+
+        .palette-pastel {
+            --primary: #5B7DB1;
+            --secondary: #F18805;
+            --accent: #E6AC8F;
+            --light: #F7F5FB;
+            --dark: #38405F;
+            --text: #2E3047;
+            --text-light: #F7F5FB;
+            --hover-primary: #4A6A99;
+            --hover-secondary: #D67700;
+            --hover-accent: #D49A7D;
+            --shadow: rgb(91 125 177 / 15%)
+        }
+
+        .palette-therapeutic {
+            --primary: #006989;
+            --secondary: #E09F3E;
+            --accent: #9BC1BC;
+            --light: #FFF;
+            --dark: #27474E;
+            --text: #333;
+            --text-light: #FFF;
+            --hover-primary: #005670;
+            --hover-secondary: #CC8F2D;
+            --hover-accent: #88B0AB;
+            --shadow: rgb(0 105 137 / 15%)
+        }
+
+        .palette-earthy {
+            --primary: #694A38;
+            --secondary: #D4B483;
+            --accent: #A37C40;
+            --light: #F9F6F0;
+            --dark: #4A3728;
+            --text: #3E3E3E;
+            --text-light: #F9F6F0;
+            --hover-primary: #5A3F2F;
+            --hover-secondary: #C4A474;
+            --hover-accent: #916E38;
+            --shadow: rgb(105 74 56 / 15%)
+        }
+
+        .palette-olive {
+            --primary: #606C38;
+            --secondary: #DDA15E;
+            --accent: #BC6C25;
+            --light: #FEFAE0;
+            --dark: #283618;
+            --text: #333;
+            --text-light: #FEFAE0;
+            --hover-primary: #4E5A2F;
+            --hover-secondary: #CB9249;
+            --hover-accent: #A65D1E;
+            --shadow: rgb(96 108 56 / 15%)
+        }
+
+        .palette-terracotta {
+            --primary: #457B9D;
+            --secondary: #E76F51;
+            --accent: #F4A261;
+            --light: #F1FAEE;
+            --dark: #1D3557;
+            --text: #2B2D42;
+            --text-light: #F1FAEE;
+            --hover-primary: #3A6A88;
+            --hover-secondary: #D15941;
+            --hover-accent: #E09151;
+            --shadow: rgb(69 123 157 / 15%)
+        }
+
+        .palette-coffee {
+            --primary: #5C4033;
+            --secondary: #E6CCB2;
+            --accent: #C7A17A;
+            --light: #FFF8F0;
+            --dark: #3A2921;
+            --text: #3E3E3E;
+            --text-light: #FFF8F0;
+            --hover-primary: #4D3629;
+            --hover-secondary: #D6BCA2;
+            --hover-accent: #B7916A;
+            --shadow: rgb(92 64 51 / 15%)
+        }
+
+        .palette-eucalyptus {
+            --primary: #2A403D;
+            --secondary: #C17C74;
+            --accent: #E2B4BD;
+            --light: #F5F1ED;
+            --dark: #22302E;
+            --text: #333;
+            --text-light: #F5F1ED;
+            --hover-primary: #233532;
+            --hover-secondary: #AD6D65;
+            --hover-accent: #D0A2AB;
+            --shadow: rgb(42 64 61 / 15%)
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Modifique esta parte no CSS existente para dispositivos móveis (dentro do @media query) */
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                /* Já temos isso */
+                padding-left: 70px;
+                /* Já temos isso */
+                padding-right: 25px;
+                /* Já temos isso */
+                /* Adicione a linha abaixo para garantir que as caixas tenham largura suficiente */
+                max-width: calc(100% - 20px);
+                /* Limitar a largura para evitar overflow */
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+                /* Já temos isso */
+            }
+
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 17px;
+                /* Já temos isso */
+            }
+
+            /* Adicione estas linhas para melhorar a aparência em dispositivos móveis */
+            .timeline-content {
+                width: 100%;
+                /* Garante que o conteúdo use toda a largura disponível */
+                box-sizing: border-box;
+                /* Inclui padding no cálculo da largura */
+            }
+
+            .timeline-year {
+                font-size: 1.1rem;
+                /* Reduz ligeiramente o tamanho da fonte para o ano */
+            }
+
+            .timeline-title {
+                font-size: 1rem;
+                /* Ajusta o tamanho do título */
+                line-height: 1.4;
+                /* Melhora o espaçamento entre linhas */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header com Navegação Completa -->
+    <header id="header">
+        <div class="header-container container">
+            <a href="/index.html" class="logo">
+                <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" width="200" height="44">
+            </a>
+            <button class="nav-toggle">
+                ☰
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre Mim</a></li>
+                <li class="nav-item"><a href="/servicos.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="/contacto.html" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="#" class="btn open-booking-modal"
+                        data-service="massagem-terapeutica">Agendar Consulta</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section do Serviço -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content">
+                <h1 class="service-hero-title">Massagem Terapêutica Personalizada</h1>
+                <p class="service-hero-description">Técnicas avançadas de massagem para alívio de dores, redução de
+                    tensão muscular e promoção do bem-estar físico e mental</p>
+                <a href="#" class="btn btn-primary open-booking-modal" data-service="massagem-terapeutica">Agendar
+                    Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visão Geral do Serviço -->
+    <section class="service-overview">
+        <div class="container">
+            <h2 class="section-title">Massagem Terapêutica em Lisboa</h2>
+
+            <div class="service-details">
+                <div class="service-content">
+                    <div class="service-video">
+                        <video id="responsive-video" controls autoplay muted loop
+                            poster="/assets/img/posters/terapia-craniana-poster-comp.webp" preload="none">
+                            <source type="video/webm">
+                            <source type="video/mp4">
+                            <!-- Adicionar legendas -->
+                            <track label="Português" kind="captions" srclang="pt"
+                                src="/assets/captions/terapia-craniana-pt.vtt" default>
+                            <!-- Opcional: adicionar outras línguas -->
+                            <!-- <track label="English" kind="captions" srclang="en" src="/assets/captions/terapia-craniana-en.vtt"> -->
+                            Seu navegador não suporta a reprodução de vídeos HTML5.
+
+                        </video>
+                    </div>
+
+                    <h3>O que é a Massagem Terapêutica?</h3>
+                    <p>A massagem terapêutica é uma abordagem manual especializada que vai muito além do relaxamento
+                        convencional. Esta técnica combina diferentes métodos de manipulação dos tecidos moles para
+                        aliviar dores, reduzir tensões musculares, melhorar a circulação e promover o bem-estar geral.
+                    </p>
+
+                    <p>Na TrataMentes, cada sessão de massagem terapêutica é personalizada para atender às suas
+                        necessidades específicas. Com mais de 20 anos de experiência, desenvolvi uma abordagem
+                        integrativa que combina técnicas de diversas tradições terapêuticas, incluindo:</p>
+
+                    <ul class="info-list">
+                        <li>Técnicas de massagem sueca para relaxamento profundo</li>
+                        <li>Pressão profunda para liberação de tensões musculares persistentes</li>
+                        <li>Técnicas miofasciais para liberar restrições nos tecidos conjuntivos</li>
+                        <li>Mobilizações suaves para melhorar a amplitude de movimento</li>
+                        <li>Técnicas de descompressão para aliviar pontos de dor</li>
+                    </ul>
+
+                    <p>O diferencial da minha abordagem está na avaliação cuidadosa e na adaptação precisa das técnicas
+                        às necessidades de cada pessoa. Não sigo protocolos padronizados - cada sessão é uma resposta
+                        única às condições apresentadas pelo seu corpo naquele momento específico.</p>
+                </div>
+
+                <div class="service-sidebar">
+                    <div class="action-card">
+                        <span class="price-tag">50€</span>
+                        <p class="price-note">Sessão de 60 minutos</p>
+                        <a href="#" class="btn btn-primary btn-block open-booking-modal"
+                            data-service="massagem-terapeutica">Agendar Consulta</a>
+                        <p style="margin-top: 1rem; font-size: 0.9rem;">Disponibilidade em dois locais em Lisboa</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="info-card-title">Indicações</h3>
+                        <ul class="info-list">
+                            <li>Dores musculares e articulares</li>
+                            <li>Tensão e rigidez na coluna e ombros</li>
+                            <li>Dores de cabeça tensionais</li>
+                            <li>Stress e ansiedade</li>
+                            <li>Má postura e desequilíbrios musculares</li>
+                            <li>Recuperação após atividade física</li>
+                            <li>Melhoria da qualidade do sono</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="info-card-title">Detalhes da Sessão</h3>
+                        <ul class="info-list">
+                            <li><strong>Duração:</strong> 60 minutos</li>
+                            <li><strong>Primeira consulta:</strong> Inclui avaliação inicial</li>
+                            <li><strong>Frequência recomendada:</strong> Personalizada conforme necessidade</li>
+                            <li><strong>Atendimento:</strong> Com hora marcada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Benefícios da Massagem Terapêutica</h2>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">●</div>
+                    <h3 class="benefit-title">Alívio da Dor</h3>
+                    <p>Redução das dores musculares e articulares através da libertação de tensões e do aumento da
+                        circulação sanguínea nas áreas afetadas, diminuindo a inflamação e promovendo a regeneração
+                        tecidual.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">●</div>
+                    <h3 class="benefit-title">Redução do Stress</h3>
+                    <p>Diminuição dos níveis de cortisol (hormona do stress) e aumento da produção de endorfinas,
+                        proporcionando uma sensação de relaxamento profundo e bem-estar mental e emocional.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">●</div>
+                    <h3 class="benefit-title">Melhoria da Circulação</h3>
+                    <p>Estimulação do fluxo sanguíneo e linfático, facilitando a remoção de toxinas e o fornecimento de
+                        oxigénio e nutrientes para os tecidos, acelerando a recuperação e a vitalidade.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">●</div>
+                    <h3 class="benefit-title">Aumento da Flexibilidade</h3>
+                    <p>Relaxamento dos músculos e liberação de fascias restritas, aumentando a amplitude de movimento
+                        das articulações e prevenindo lesões relacionadas à rigidez muscular.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">●</div>
+                    <h3 class="benefit-title">Melhor Qualidade do Sono</h3>
+                    <p>Promoção do relaxamento profundo e regulação do sistema nervoso, facilitando um sono mais
+                        reparador e contribuindo para o equilíbrio dos ciclos naturais do corpo.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">●</div>
+                    <h3 class="benefit-title">Fortalecimento Imunológico</h3>
+                    <p>Estimulação do sistema linfático e redução dos níveis de stress, contribuindo para o
+                        fortalecimento das defesas naturais do organismo e para a prevenção de doenças.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona o Processo -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Como Funciona a Sessão</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Avaliação Inicial</h3>
+                        <p>A sessão começa com uma conversa para compreender as suas necessidades, histórico de saúde e
+                            objetivos. Realizo também uma breve avaliação postural e palpatória para identificar áreas
+                            de tensão e desequilíbrios.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Plano Personalizado</h3>
+                        <p>Com base na avaliação, desenvolvo um plano de massagem adaptado especificamente às suas
+                            necessidades, selecionando as técnicas mais adequadas para alcançar os resultados desejados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Tratamento</h3>
+                        <p>A massagem é realizada em um ambiente tranquilo e acolhedor. Utilizo uma combinação de
+                            técnicas para trabalhar as áreas de tensão, ajustando a pressão e as manobras de acordo com
+                            a sua resposta e feedback durante a sessão.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Recomendações Pós-Sessão</h3>
+                        <p>No final, ofereço orientações para maximizar os benefícios do tratamento, como exercícios
+                            simples, dicas de postura ou sugestões de hábitos para o dia a dia, contribuindo para
+                            resultados mais duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem os Clientes</h2>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-slide">
+                    <p class="testimonial-text">A massagem terapêutica do João transformou completamente a minha
+                        qualidade de vida. Sofria de dores crônicas nas costas há anos, e após apenas 3 sessões, senti
+                        uma melhoria significativa. A sua abordagem personalizada e conhecimento profundo fazem toda a
+                        diferença.</p>
+                    <div class="client-name">Ana Soares</div>
+                    <div class="client-note">Cliente desde 2020</div>
+                </div>
+                <!-- Adicionar mais depoimentos quando disponíveis -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ - corrigido para ter a estrutura HTML adequada -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso marcar com antecedência?
+                        <div class="faq-icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, é recomendável agendar sua sessão com antecedência para garantir disponibilidade no
+                            horário desejado. A agenda costuma ficar completa especialmente nos horários de fim de tarde
+                            e finais de semana.</p>
+                        <p>Você pode agendar facilmente através do nosso sistema online ou entrando em contato por
+                            telefone. Em caso de necessidade de cancelamento, pedimos que avise com pelo menos 24 horas
+                            de antecedência.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        As sessões são cobertas por seguro de saúde?
+                        <div class="faq-icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Alguns planos de saúde e seguros cobrem sessões de massagem terapêutica, especialmente quando
+                            prescritas por um médico. Forneço recibos detalhados que podem ser utilizados para
+                            reembolso, dependendo dos termos da sua apólice de seguro.</p>
+                        <p>Recomendo verificar diretamente com sua seguradora quais são as condições específicas de
+                            cobertura para terapias manuais e se é necessária prescrição médica para o reembolso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Com que frequência devo fazer a massagem terapêutica?
+                        <div class="faq-icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A frequência ideal varia conforme as suas necessidades específicas e objetivos de tratamento.
+                            Para condições agudas, como lesões recentes ou dores intensas, podem ser recomendadas
+                            sessões semanais inicialmente. Para manutenção e prevenção, sessões quinzenais ou mensais
+                            costumam ser suficientes.</p>
+                        <p>Após a avaliação inicial, poderei recomendar um plano personalizado baseado na sua condição
+                            particular. O importante é lembrar que os benefícios da massagem terapêutica são
+                            cumulativos, e um programa regular pode proporcionar resultados mais duradouros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual a diferença entre massagem relaxante e terapêutica?
+                        <div class="faq-icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A massagem relaxante tem como principal objetivo proporcionar relaxamento geral e bem-estar,
+                            utilizando movimentos mais suaves e ritmos constantes para induzir um estado de calma.</p>
+                        <p>Já a massagem terapêutica é mais específica e focada na resolução de problemas físicos.
+                            Utiliza técnicas variadas e pressões diferenciadas para tratar tensões musculares, dores,
+                            restrições de movimento e outras disfunções. Embora também promova relaxamento, seu objetivo
+                            primário é terapêutico - identificar e tratar a causa das dores e desconfortos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Devo sentir dor durante a massagem terapêutica?
+                        <div class="faq-icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A massagem terapêutica trabalha áreas de tensão e pode, em alguns momentos, gerar uma
+                            sensação de "dor boa" ou desconforto controlado ao liberar pontos de tensão. No entanto,
+                            nunca deve ser excessivamente dolorosa ou insuportável.</p>
+                        <p>Trabalho sempre respeitando os limites de cada pessoa e ajustando a pressão conforme o seu
+                            feedback. Uma boa comunicação durante a sessão é fundamental para garantir que a intensidade
+                            esteja adequada. O objetivo é sempre proporcionar alívio, não aumentar o desconforto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual o tempo de duração da massagem?
+                        <div class="faq-icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A sessão de massagem terapêutica dura aproximadamente 60 minutos. Este tempo permite uma
+                            abordagem completa das áreas que necessitam de atenção, sem apressar o processo terapêutico.
+                        </p>
+                        <p>Para a primeira consulta, reserve um pouco mais de tempo (cerca de 75 minutos), pois inclui
+                            uma avaliação mais detalhada para estabelecer um plano de tratamento adequado às suas
+                            necessidades específicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Comece a cuidar do seu bem-estar hoje mesmo!</h2>
+            <p class="cta-description">Agende a sua sessão de Massagem Terapêutica e dê o primeiro passo para uma vida
+                com menos dores e mais qualidade</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary open-booking-modal" data-service="massagem-terapeutica">Agendar
+                    Consulta</a>
+                <a href="/servicos.html" class="btn btn-secondary">Ver Outros Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer com Newsletter - VERSÃO CORRIGIDA -->
+    <footer>
+        <div class="container">
+            <!-- Título principal do footer (visualmente oculto para manter o design) -->
+            <h2 class="sr-only">Informações e Contato</h2>
+
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" class="mb-3" width="150"
+                        height="33">
+                    <p>Terapias manuais personalizadas para uma vida com mais equilíbrio e bem-estar.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Links Rápidos</h3> <!-- Mudou de h4 para h3 -->
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="/index.html">Início</a></li>
+                        <li class="footer-link"><a href="/sobre.html">Sobre Mim</a></li>
+                        <li class="footer-link"><a href="/servicos.html">Serviços</a></li>
+                        <li class="footer-link"><a href="/blog.html">Blog</a></li>
+                        <li class="footer-link"><a href="/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contacto</h3> <!-- Mudou de h4 para h3 -->
+                    <div class="contact-item">
+                        <i aria-hidden="true">📞</i>
+                        <span>+351 937 543 312</span>
+                    </div>
+                    <div class="contact-item">
+                        <i aria-hidden="true">✉️</i>
+                        <span>joao.goulart@tratamentes.pt</span>
+                    </div>
+                    <div class="contact-item">
+                        <i aria-hidden="true">🕒</i>
+                        <span>Seg - Dom: 10h às 22h</span>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3> <!-- Mudou de h4 para h3 -->
+                    <p>Receba novidades e dicas de bem-estar diretamente no seu email.</p>
+                    <form class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Seu email para receber a newsletter</label>
+                        <input type="email" id="newsletter-email" placeholder="O seu melhor email"
+                            class="newsletter-input" aria-label="Seu email para receber a newsletter" />
+                        <button type="submit" class="newsletter-button">Subscrever</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2001-2025 TrataMentes by João Goulart. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Agendamento -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Agendar Consulta</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <noscript>
+                    <div class="booking-fallback">
+                        <p>Para usar o sistema de agendamento, é necessário ter o JavaScript ativado.</p>
+                        <p>Como alternativa, você pode agendar diretamente no link abaixo:</p>
+                        <a href="https://tratamentes.buk.pt/" class="btn btn-primary" target="_blank">Agendar no
+                            Buk.pt</a>
+                    </div>
+                </noscript>
+                <iframe id="bookingIframe" class="booking-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seletor de Paletas -->
+    <section id="selectorPaletas">
+        <div class="palette-switcher">
+            <div class="palette-switcher-header">
+                <h4 class="palette-switcher-title">Escolha uma paleta de cores</h4>
+                <button class="palette-switcher-toggle">−</button>
+            </div>
+            <div class="palette-switcher-content">
+                <div class="palette-option" data-palette="earthy">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #694A38;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #D4B483;"></div>
+                        <div class="palette-preview-accent" style="background-color: #A37C40;"></div>
+                    </div>
+                    <span class="palette-name">Tons Terrosos</span>
+                </div>
+                <div class="palette-option" data-palette="therapeutic">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #006989;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E09F3E;"></div>
+                        <div class="palette-preview-accent" style="background-color: #9BC1BC;"></div>
+                    </div>
+                    <span class="palette-name">Terapêutico</span>
+                </div>
+                <div class="palette-option" data-palette="olive">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #606C38;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #DDA15E;"></div>
+                        <div class="palette-preview-accent" style="background-color: #BC6C25;"></div>
+                    </div>
+                    <span class="palette-name">Verde Oliva</span>
+                </div>
+                <div class="palette-option" data-palette="terracotta">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #457B9D;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E76F51;"></div>
+                        <div class="palette-preview-accent" style="background-color: #F4A261;"></div>
+                    </div>
+                    <span class="palette-name">Terracota</span>
+                </div>
+                <div class="palette-option" data-palette="coffee">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #5C4033;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #E6CCB2;"></div>
+                        <div class="palette-preview-accent" style="background-color: #C7A17A;"></div>
+                    </div>
+                    <span class="palette-name">Café & Nata</span>
+                </div>
+                <div class="palette-option" data-palette="eucalyptus">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #2A403D;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #C17C74;"></div>
+                        <div class="palette-preview-accent" style="background-color: #E2B4BD;"></div>
+                    </div>
+                    <span class="palette-name">Eucalipto</span>
+                </div>
+                <div class="palette-option" data-palette="glamour">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #0A2342;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #D5AB55;"></div>
+                        <div class="palette-preview-accent" style="background-color: #BF9B6F;"></div>
+                    </div>
+                    <span class="palette-name">Glamour</span>
+                </div>
+                <div class="palette-option" data-palette="pastel">
+                    <div class="palette-preview">
+                        <div class="palette-preview-primary" style="background-color: #5B7DB1;"></div>
+                        <div class="palette-preview-secondary" style="background-color: #F18805;"></div>
+                        <div class="palette-preview-accent" style="background-color: #E6AC8F;"></div>
+                    </div>
+                    <span class="palette-name">Pastéis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/booking-modal.js"></script>
+    <script src="/assets/js/responsive-video-loader.js"></script>
+
+    <!-- Script para o FAQ e Modal de Agendamento -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Script para as FAQs
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(function (item) {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    // Toggle a classe active no item atual
+                    item.classList.toggle('active');
+
+                    // Fechar outros itens (comportamento de acordeão)
+                    faqItems.forEach(function (otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
