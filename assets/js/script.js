@@ -38,69 +38,24 @@ accordionItems.forEach(item => {
     });
 });
 
-// Seletor de Paletas de Cores
+/* Script para o FAQ e Modal de Agendamento */
 document.addEventListener('DOMContentLoaded', function () {
-    // Inicializar o seletor de paletas
-    const paletteOptions = document.querySelectorAll('.palette-option');
-    const toggleButton = document.querySelector('.palette-switcher-toggle');
-    const paletteSwitcher = document.querySelector('.palette-switcher');
+    // Script para as FAQs
+    const faqItems = document.querySelectorAll('.faq-item');
 
-    // Inicializar o accordion
-    const firstAccordionItem = document.querySelector('.accordion-item');
-    if (firstAccordionItem) {
-        firstAccordionItem.classList.add('active');
-    }
+    faqItems.forEach(function (item) {
+        const question = item.querySelector('.faq-question');
 
-    // Função para aplicar a paleta selecionada
-    function applyPalette(paletteName) {
-        // Remover todas as classes de paletas do elemento html
-        document.documentElement.classList.remove(
-            'palette-therapeutic',
-            'palette-health1',
-            'palette-health2',
-            'palette-health3',
-            'palette-health4',
-            'palette-health5',
-            'palette-health6',
-            'palette-health7'
-        );
+        question.addEventListener('click', function () {
+            // Toggle a classe active no item atual
+            item.classList.toggle('active');
 
-        // Adicionar a classe da paleta selecionada
-        document.documentElement.classList.add(paletteName);
-
-        // Salvar a preferência no localStorage
-        localStorage.setItem('selectedPalette', paletteName);
-
-        // Destacar a opção selecionada visualmente
-        paletteOptions.forEach(opt => {
-            if (opt.dataset.palette === paletteName.replace('palette-', '')) {
-                opt.style.fontWeight = 'bold';
-            } else {
-                opt.style.fontWeight = 'normal';
-            }
-        });
-    }
-
-    // Adicionar listeners para cada opção de paleta
-    paletteOptions.forEach(option => {
-        option.addEventListener('click', function () {
-            const paletteName = 'palette-' + this.dataset.palette;
-            applyPalette(paletteName);
+            // Fechar outros itens (comportamento de acordeão)
+            faqItems.forEach(function (otherItem) {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
         });
     });
-
-    // Colapsar/expandir o seletor de paletas
-    toggleButton.addEventListener('click', function () {
-        paletteSwitcher.classList.toggle('collapsed');
-        this.textContent = paletteSwitcher.classList.contains('collapsed') ? '+' : '−';
-    });
-
-    // Carregar paleta salva anteriormente
-    const savedPalette = localStorage.getItem('selectedPalette');
-    if (savedPalette) {
-        applyPalette(savedPalette);
-    } else {
-        // Se não houver paleta salva, usar 'palette-earthy' como padrão
-        applyPalette('palette-earthy');
-    }
 });

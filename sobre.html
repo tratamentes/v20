@@ -14,7 +14,7 @@
             margin: 3rem auto;
             padding: 0 1rem;
         }
-        
+
         .timeline::after {
             content: '';
             position: absolute;
@@ -26,22 +26,22 @@
             margin-left: -2px;
             border-radius: 4px;
         }
-        
+
         .timeline-item {
             padding: 1rem 2rem;
             position: relative;
             width: 50%;
             margin-bottom: 2rem;
         }
-        
+
         .timeline-item:nth-child(odd) {
             left: 0;
         }
-        
+
         .timeline-item:nth-child(even) {
             left: 50%;
         }
-        
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -53,34 +53,34 @@
             border-radius: 50%;
             z-index: 1;
         }
-        
+
         .timeline-item:nth-child(odd)::after {
             right: -14px;
         }
-        
+
         .timeline-item:nth-child(even)::after {
             left: -14px;
         }
-        
+
         .timeline-content {
             background-color: white;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 3px 10px var(--shadow);
         }
-        
+
         .timeline-year {
             color: var(--primary);
             font-weight: 700;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
-        
+
         .timeline-title {
             margin-bottom: 0.8rem;
             color: var(--accent);
         }
-        
+
         .profile-header {
             display: flex;
             flex-wrap: wrap;
@@ -88,7 +88,7 @@
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
+
         .profile-image {
             flex: 1;
             min-width: 280px;
@@ -97,42 +97,42 @@
             overflow: hidden;
             box-shadow: 0 10px 30px var(--shadow);
         }
-        
+
         .profile-info {
             flex: 2;
             min-width: 300px;
         }
-        
+
         .profile-name {
             font-size: 2.2rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
-        
+
         .profile-title {
             font-size: 1.2rem;
             color: var(--accent);
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
-        
+
         .profile-bio {
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
-        
+
         .expertise-section {
             background-color: white;
             padding: 4rem 0;
         }
-        
+
         .expertise-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        
+
         .expertise-card {
             background-color: var(--light);
             border-radius: 8px;
@@ -140,32 +140,32 @@
             box-shadow: 0 5px 15px var(--shadow);
             transition: transform 0.3s ease;
         }
-        
+
         .expertise-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .expertise-content {
             padding: 1.5rem;
         }
-        
+
         .expertise-icon {
             font-size: 2.5rem;
             color: var(--secondary);
             margin-bottom: 1rem;
         }
-        
+
         .expertise-title {
             font-size: 1.2rem;
             color: var(--primary);
             margin-bottom: 0.8rem;
         }
-        
+
         .certification-section {
             background-color: var(--light);
             padding: 4rem 0;
         }
-        
+
         .certification-list {
             display: flex;
             flex-wrap: wrap;
@@ -173,7 +173,7 @@
             justify-content: center;
             margin-top: 2rem;
         }
-        
+
         .certification-item {
             background-color: white;
             border-radius: 8px;
@@ -183,37 +183,37 @@
             box-shadow: 0 5px 15px var(--shadow);
             transition: transform 0.3s ease;
         }
-        
+
         .certification-item:hover {
             transform: translateY(-5px);
         }
-        
+
         .certification-name {
             font-size: 1.1rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-        
+
         .certification-issuer {
             font-size: 0.9rem;
             color: var(--accent);
             margin-bottom: 0.8rem;
         }
-        
+
         .philosophy-section {
             background-color: var(--primary);
             color: var(--text-light);
             padding: 4rem 0;
             text-align: center;
         }
-        
+
         .philosophy-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 1rem;
         }
-        
+
         .philosophy-quote {
             font-family: "Playfair Display", serif;
             font-size: 1.5rem;
@@ -222,7 +222,7 @@
             position: relative;
             line-height: 1.6;
         }
-        
+
         .philosophy-quote::before,
         .philosophy-quote::after {
             content: "\201D";
@@ -232,30 +232,30 @@
             position: absolute;
             opacity: 0.5;
         }
-        
+
         .philosophy-quote::before {
             left: -20px;
             top: -20px;
         }
-        
+
         .philosophy-quote::after {
             content: "\201D";
             right: -20px;
             bottom: -20px;
         }
-        
+
         .approach-section {
             background-color: white;
             padding: 4rem 0;
         }
-        
+
         .approach-content {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
             margin-top: 2rem;
         }
-        
+
         .approach-item {
             flex: 1;
             min-width: 280px;
@@ -264,7 +264,7 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px var(--shadow);
         }
-        
+
         .approach-number {
             display: inline-block;
             width: 40px;
@@ -277,30 +277,30 @@
             font-weight: 700;
             margin-bottom: 1rem;
         }
-        
+
         .approach-title {
             font-size: 1.2rem;
             color: var(--primary);
             margin-bottom: 0.8rem;
         }
-        
+
         /* Media queries for the timeline to stack on mobile */
         @media (max-width: 768px) {
             .timeline::after {
                 left: 31px;
             }
-            
+
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-            
+
             .timeline-item:nth-child(odd),
             .timeline-item:nth-child(even) {
                 left: 0;
             }
-            
+
             .timeline-item:nth-child(odd)::after,
             .timeline-item:nth-child(even)::after {
                 left: 17px;
@@ -343,35 +343,53 @@
             <div class="profile-header">
                 <div class="profile-image">
                     <!-- NOTA: Substitua pelo caminho da sua foto profissional de corpo inteiro ou meio corpo -->
-                    <img src="/assets/img/image-therapist-crossed-arms-800x1200-hero-portrait.webp" alt="João Paulo Goulart - Terapeuta">
+                    <img src="/assets/img/image-therapist-crossed-arms-800x1200-hero-portrait.webp"
+                        alt="João Paulo Goulart - Terapeuta">
                 </div>
                 <div class="profile-info">
                     <h2 class="profile-name">João Paulo Goulart</h2>
                     <p class="profile-title">Terapeuta Manual • Especialista em Terapias Integrativas</p>
                     <div class="profile-bio">
-                        <p>Com mais de duas décadas de experiência dedicada às terapias manuais, construí uma abordagem única que integra diversas técnicas terapêuticas para proporcionar o melhor resultado para cada pessoa que atendo.</p>
-                        
-                        <p>A minha jornada começou em 2001, quando me formei em massoterapia e, desde então, venho ampliando constantemente meus conhecimentos através de diversas formações complementares, incluindo técnicas de osteopatia, terapia crânio-sacral e libertação miofascial.</p>
-                        
+                        <p>Com mais de duas décadas de experiência dedicada às terapias manuais, construí uma abordagem
+                            única que integra diversas técnicas terapêuticas para proporcionar o melhor resultado para
+                            cada pessoa que atendo.</p>
+
+                        <p>A minha jornada começou em 2001, quando me formei em massoterapia e, desde então, venho
+                            ampliando constantemente meus conhecimentos através de diversas formações complementares,
+                            incluindo técnicas de osteopatia, terapia crânio-sacral e libertação miofascial.</p>
+
                         <!-- NOTA: Adicione mais 1-2 parágrafos sobre sua história pessoal, motivação para trabalhar com terapias -->
-                        <p>Acredito profundamente no poder do toque terapêutico e na capacidade inata do corpo de se autorregular quando recebe o estímulo adequado. Meu compromisso é com seu bem-estar integral, não apenas tratando sintomas, mas buscando as raízes dos desequilíbrios para proporcionar resultados duradouros.</p>
+                        <p>Acredito profundamente no poder do toque terapêutico e na capacidade inata do corpo de se
+                            autorregular quando recebe o estímulo adequado. Meu compromisso é com seu bem-estar
+                            integral, não apenas tratando sintomas, mas buscando as raízes dos desequilíbrios para
+                            proporcionar resultados duradouros.</p>
                     </div>
-                    
+
                     <!-- NOTA: Se desejar, adicione links para redes sociais profissionais ou curriculum -->
                     <div class="contact-social">
-                        <a href="https://facebook.com/trata.mentes" class="social-link" title="Facebook" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127c-.82-.088-1.643-.13-2.467-.127-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
+                        <a href="https://facebook.com/trata.mentes" class="social-link" title="Facebook"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127c-.82-.088-1.643-.13-2.467-.127-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z">
+                                </path>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/trata.mentes" class="social-link" title="Instagram" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <a href="https://instagram.com/trata.mentes" class="social-link" title="Instagram"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/joao-paulo-goulart/" class="social-link" title="LinkedIn" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                        <a href="https://www.linkedin.com/in/joao-paulo-goulart/" class="social-link" title="LinkedIn"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
                             </svg>
                         </a>
                     </div>
@@ -385,10 +403,17 @@
         <div class="container">
             <div class="philosophy-content">
                 <h2 class="section-title">A minha Filosofia</h2>
-                <p class="philosophy-quote">Acredito que o corpo humano possui uma inteligência inata para a cura. O meu papel como terapeuta é criar as condições ideais para que essa inteligência funcione plenamente, removendo bloqueios e facilitando o retorno ao equilíbrio natural.</p>
-                    <p>Esta visão holística guia cada sessão que conduzo, considerando que a mente, o corpo e a energia são partes integradas de um todo. Em vez de me limitar a tratar sintomas isolados, procuro compreender o desequilíbrio na sua origem e trabalhar com a pessoa como um todo.</p>
-                    <!-- NOTA: Adicionar mais 1-2 parágrafos sobre a sua filosofia terapêutica, valores profissionais -->
-                    <p>Cada corpo tem uma história única, e eu respeito profundamente essa individualidade. Não existem protocolos rígidos no meu trabalho - cada sessão é personalizada e adaptada às necessidades específicas que encontro. Valorizo a escuta atenta e a construção de uma relação terapêutica baseada na confiança e no respeito mútuo.</p>
+                <p class="philosophy-quote">Acredito que o corpo humano possui uma inteligência inata para a cura. O meu
+                    papel como terapeuta é criar as condições ideais para que essa inteligência funcione plenamente,
+                    removendo bloqueios e facilitando o retorno ao equilíbrio natural.</p>
+                <p>Esta visão holística guia cada sessão que conduzo, considerando que a mente, o corpo e a energia são
+                    partes integradas de um todo. Em vez de me limitar a tratar sintomas isolados, procuro compreender o
+                    desequilíbrio na sua origem e trabalhar com a pessoa como um todo.</p>
+                <!-- NOTA: Adicionar mais 1-2 parágrafos sobre a sua filosofia terapêutica, valores profissionais -->
+                <p>Cada corpo tem uma história única, e eu respeito profundamente essa individualidade. Não existem
+                    protocolos rígidos no meu trabalho - cada sessão é personalizada e adaptada às necessidades
+                    específicas que encontro. Valorizo a escuta atenta e a construção de uma relação terapêutica baseada
+                    na confiança e no respeito mútuo.</p>
             </div>
         </div>
     </section>
@@ -402,32 +427,39 @@
                     <div class="expertise-content">
                         <div class="expertise-icon">●</div>
                         <h3 class="expertise-title">Terapia Crânio-Sacral</h3>
-                        <p>Técnica suave que trabalha com o sistema crânio-sacral para liberar tensões profundas, melhorar o fluxo do líquido cefalorraquidiano e promover equilíbrio no sistema nervoso central.</p>
+                        <p>Técnica suave que trabalha com o sistema crânio-sacral para liberar tensões profundas,
+                            melhorar o fluxo do líquido cefalorraquidiano e promover equilíbrio no sistema nervoso
+                            central.</p>
                     </div>
                 </div>
-                
+
                 <div class="expertise-card">
                     <div class="expertise-content">
                         <div class="expertise-icon">●</div>
                         <h3 class="expertise-title">Massagem Terapêutica</h3>
-                        <p>Combinação personalizada de técnicas de massagem que visam aliviar tensões musculares, melhorar a circulação e promover o relaxamento profundo, adaptadas às necessidades específicas de cada pessoa.</p>
+                        <p>Combinação personalizada de técnicas de massagem que visam aliviar tensões musculares,
+                            melhorar a circulação e promover o relaxamento profundo, adaptadas às necessidades
+                            específicas de cada pessoa.</p>
                     </div>
                 </div>
-                
+
                 <div class="expertise-card">
                     <div class="expertise-content">
                         <div class="expertise-icon">●</div>
                         <h3 class="expertise-title">Técnicas Osteopáticas</h3>
-                        <p>Abordagem que utiliza princípios da osteopatia para restaurar o equilíbrio estrutural do corpo, melhorar a mobilidade articular e otimizar o funcionamento dos sistemas corporais.</p>
+                        <p>Abordagem que utiliza princípios da osteopatia para restaurar o equilíbrio estrutural do
+                            corpo, melhorar a mobilidade articular e otimizar o funcionamento dos sistemas corporais.
+                        </p>
                     </div>
                 </div>
-                
+
                 <!-- NOTA: Adicione mais cards de especialidades conforme necessário -->
                 <div class="expertise-card">
                     <div class="expertise-content">
                         <div class="expertise-icon">●</div>
                         <h3 class="expertise-title">Libertação Miofascial</h3>
-                        <p>Tratamento que visa liberar restrições no tecido conjuntivo (fáscia) que envolve os músculos, restaurando o movimento, aliviando a dor e melhorando a função corporal global.</p>
+                        <p>Tratamento que visa liberar restrições no tecido conjuntivo (fáscia) que envolve os músculos,
+                            restaurando o movimento, aliviando a dor e melhorando a função corporal global.</p>
                     </div>
                 </div>
             </div>
@@ -443,38 +475,44 @@
                 <div class="certification-item">
                     <h3 class="certification-name">Formação em Massoterapia Avançada</h3>
                     <p class="certification-issuer">Instituto de Terapias Naturais de Lisboa</p>
-                    <p>Formação completa em técnicas de massagem terapêutica, incluindo massagem sueca, shiatsu, e técnicas de deep tissue.</p>
+                    <p>Formação completa em técnicas de massagem terapêutica, incluindo massagem sueca, shiatsu, e
+                        técnicas de deep tissue.</p>
                 </div>
-                
+
                 <div class="certification-item">
                     <h3 class="certification-name">Especialização em Terapia Crânio-Sacral</h3>
                     <p class="certification-issuer">Upledger Institute Portugal</p>
-                    <p>Certificação em técnicas avançadas de terapia crânio-sacral, com foco em tratamento de distúrbios do sistema nervoso e alívio de dores crônicas.</p>
+                    <p>Certificação em técnicas avançadas de terapia crânio-sacral, com foco em tratamento de distúrbios
+                        do sistema nervoso e alívio de dores crônicas.</p>
                 </div>
-                
+
                 <div class="certification-item">
                     <h3 class="certification-name">Curso de Técnicas Osteopáticas</h3>
                     <p class="certification-issuer">Escola de Osteopatia de Madrid - Filial Lisboa</p>
-                    <p>Formação em princípios e técnicas de osteopatia, com ênfase em diagnóstico e tratamento de disfunções estruturais.</p>
+                    <p>Formação em princípios e técnicas de osteopatia, com ênfase em diagnóstico e tratamento de
+                        disfunções estruturais.</p>
                 </div>
-                
+
                 <!-- NOTA: Adicione mais certificações conforme necessário -->
                 <div class="certification-item">
                     <h3 class="certification-name">Especialização em Libertação Miofascial</h3>
                     <p class="certification-issuer">Instituto de Terapias Manuais Avançadas</p>
-                    <p>Formação avançada em técnicas de libertação do tecido conectivo para tratamento de dores crônicas e melhoria da mobilidade.</p>
+                    <p>Formação avançada em técnicas de libertação do tecido conectivo para tratamento de dores crônicas
+                        e melhoria da mobilidade.</p>
                 </div>
-                
+
                 <div class="certification-item">
                     <h3 class="certification-name">Medicina Tradicional Chinesa - Módulo Básico</h3>
                     <p class="certification-issuer">Escola Portuguesa de Acupuntura</p>
-                    <p>Fundamentos de medicina tradicional chinesa, incluindo teoria dos meridianos e pontos de acupressão para aplicação em terapias manuais.</p>
+                    <p>Fundamentos de medicina tradicional chinesa, incluindo teoria dos meridianos e pontos de
+                        acupressão para aplicação em terapias manuais.</p>
                 </div>
-                
+
                 <div class="certification-item">
                     <h3 class="certification-name">Curso de Anatomia Palpatória</h3>
                     <p class="certification-issuer">Faculdade de Medicina de Lisboa</p>
-                    <p>Estudo aprofundado de anatomia humana com foco em técnicas de palpação para identificação precisa de estruturas corporais.</p>
+                    <p>Estudo aprofundado de anatomia humana com foco em técnicas de palpação para identificação precisa
+                        de estruturas corporais.</p>
                 </div>
             </div>
         </div>
@@ -488,25 +526,33 @@
                 <div class="approach-item">
                     <span class="approach-number">1</span>
                     <h3 class="approach-title">Avaliação Completa</h3>
-                    <p>Cada nova relação terapêutica começa com uma avaliação aprofundada. Além de ouvir atentamente sua história e sintomas, realizo uma avaliação postural e palpatória para identificar padrões de tensão e restrições de movimento.</p>
+                    <p>Cada nova relação terapêutica começa com uma avaliação aprofundada. Além de ouvir atentamente sua
+                        história e sintomas, realizo uma avaliação postural e palpatória para identificar padrões de
+                        tensão e restrições de movimento.</p>
                 </div>
-                
+
                 <div class="approach-item">
                     <span class="approach-number">2</span>
                     <h3 class="approach-title">Tratamento Personalizado</h3>
-                    <p>Com base na avaliação inicial, desenvolvo um plano de tratamento totalmente adaptado às suas necessidades específicas, combinando diferentes técnicas para obter os melhores resultados para o seu caso particular.</p>
+                    <p>Com base na avaliação inicial, desenvolvo um plano de tratamento totalmente adaptado às suas
+                        necessidades específicas, combinando diferentes técnicas para obter os melhores resultados para
+                        o seu caso particular.</p>
                 </div>
-                
+
                 <div class="approach-item">
                     <span class="approach-number">3</span>
                     <h3 class="approach-title">Trabalho Integrado</h3>
-                    <p>Acredito no trabalho conjunto entre terapeuta e paciente. Além do tratamento presencial, ofereço orientações para práticas e exercícios que você pode realizar em casa para potencializar os resultados das sessões.</p>
+                    <p>Acredito no trabalho conjunto entre terapeuta e paciente. Além do tratamento presencial, ofereço
+                        orientações para práticas e exercícios que você pode realizar em casa para potencializar os
+                        resultados das sessões.</p>
                 </div>
-                
+
                 <div class="approach-item">
                     <span class="approach-number">4</span>
                     <h3 class="approach-title">Acompanhamento Contínuo</h3>
-                    <p>O processo terapêutico é monitorado e ajustado constantemente. A cada sessão, avaliamos os progressos e adaptamos as técnicas conforme necessário para garantir uma evolução positiva e sustentável.</p>
+                    <p>O processo terapêutico é monitorado e ajustado constantemente. A cada sessão, avaliamos os
+                        progressos e adaptamos as técnicas conforme necessário para garantir uma evolução positiva e
+                        sustentável.</p>
                 </div>
             </div>
         </div>
@@ -522,47 +568,53 @@
                     <div class="timeline-content">
                         <div class="timeline-year">2001</div>
                         <h3 class="timeline-title">Início da Carreira</h3>
-                        <p>Formação em Massoterapia e início do atendimento em clínica de terapias naturais em Lisboa.</p>
+                        <p>Formação em Massoterapia e início do atendimento em clínica de terapias naturais em Lisboa.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2005</div>
                         <h3 class="timeline-title">Especialização em Terapias Manuais</h3>
-                        <p>Conclusão do curso de técnicas osteopáticas e início da integração dessas abordagens nos tratamentos.</p>
+                        <p>Conclusão do curso de técnicas osteopáticas e início da integração dessas abordagens nos
+                            tratamentos.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2010</div>
                         <h3 class="timeline-title">Abertura do Primeiro Espaço</h3>
-                        <p>Inauguração do primeiro espaço próprio para atendimentos na região de Alvalade, em Lisboa.</p>
+                        <p>Inauguração do primeiro espaço próprio para atendimentos na região de Alvalade, em Lisboa.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2015</div>
                         <h3 class="timeline-title">Expansão e Reconhecimento</h3>
-                        <p>Expansão dos atendimentos para Braamcamp e início de parcerias com profissionais de saúde complementares.</p>
+                        <p>Expansão dos atendimentos para Braamcamp e início de parcerias com profissionais de saúde
+                            complementares.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2020</div>
                         <h3 class="timeline-title">Adaptação e Inovação</h3>
-                        <p>Desenvolvimento de novos protocolos de atendimento e adaptação às necessidades pós-pandemia.</p>
+                        <p>Desenvolvimento de novos protocolos de atendimento e adaptação às necessidades pós-pandemia.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-year">2023</div>
                         <h3 class="timeline-title">Renovação e Foco na Prevenção</h3>
-                        <p>Renovação dos espaços de atendimento e desenvolvimento de programas focados na prevenção e bem-estar integral.</p>
+                        <p>Renovação dos espaços de atendimento e desenvolvimento de programas focados na prevenção e
+                            bem-estar integral.</p>
                     </div>
                 </div>
             </div>
@@ -573,7 +625,8 @@
     <section class="cta">
         <div class="container">
             <h2 class="cta-title">Vamos iniciar a sua jornada de recuperação?</h2>
-            <p class="cta-description">Agende a sua primeira consulta e dê o primeiro passo para uma vida com mais equilíbrio e bem-estar</p>
+            <p class="cta-description">Agende a sua primeira consulta e dê o primeiro passo para uma vida com mais
+                equilíbrio e bem-estar</p>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-primary open-booking-modal">Agende a sua Consulta</a>
                 <a href="/servicos.html" class="btn btn-secondary">Conhecer Serviços</a>
@@ -586,7 +639,8 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-logo">
-                    <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" class="mb-3" width="150" height="33">
+                    <img src="/assets/img/logotipo-tratamentes-pt-inv.svg" alt="TrataMentes" class="mb-3" width="150"
+                        height="33">
                     <p>Terapias manuais personalizadas para uma vida com mais equilíbrio e bem-estar.</p>
                 </div>
                 <div class="footer-nav">
@@ -619,7 +673,8 @@
                     <p>Receba novidades e dicas de bem-estar diretamente no seu email.</p>
                     <form class="newsletter-form">
                         <label for="newsletter-email" class="sr-only">Seu email para receber a newsletter</label>
-                        <input type="email" id="newsletter-email" placeholder="O seu melhor email" class="newsletter-input" aria-label="Seu email para receber a newsletter" />
+                        <input type="email" id="newsletter-email" placeholder="O seu melhor email"
+                            class="newsletter-input" aria-label="Seu email para receber a newsletter" />
                         <button type="submit" class="newsletter-button">Subscrever</button>
                     </form>
                 </div>
@@ -629,86 +684,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Seletor de Paletas -->
-    <section id="selectorPaletas">
-        <div class="palette-switcher">
-            <div class="palette-switcher-header">
-                <h4 class="palette-switcher-title">Escolha uma paleta de cores</h4>
-                <button class="palette-switcher-toggle">−</button>
-            </div>
-            <div class="palette-switcher-content">
-                <div class="palette-option" data-palette="therapeutic">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #006989;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #E09F3E;"></div>
-                        <div class="palette-preview-accent" style="background-color: #9BC1BC;"></div>
-                    </div>
-                    <span class="palette-name">Terapêutico</span>
-                </div>
-                <div class="palette-option" data-palette="health1">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #569099;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #f6d809;"></div>
-                        <div class="palette-preview-accent" style="background-color: #93c572;"></div>
-                    </div>
-                    <span class="palette-name">Calmaria</span>
-                </div>
-                <div class="palette-option" data-palette="health2">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #5f9aae;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #fff138;"></div>
-                        <div class="palette-preview-accent" style="background-color: #d1c2a5;"></div>
-                    </div>
-                    <span class="palette-name">Brisa</span>
-                </div>
-                <div class="palette-option" data-palette="health3">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #1b5480;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #f89b20;"></div>
-                        <div class="palette-preview-accent" style="background-color: #fce724;"></div>
-                    </div>
-                    <span class="palette-name">Energia</span>
-                </div>
-                <div class="palette-option" data-palette="health4">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #17375B;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #E2BF65;"></div>
-                        <div class="palette-preview-accent" style="background-color: #92D6BB;"></div>
-                    </div>
-                    <span class="palette-name">Tranquilidade</span>
-                </div>
-                <div class="palette-option" data-palette="health5">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #276868;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #C95639;"></div>
-                        <div class="palette-preview-accent" style="background-color: #889930;"></div>
-                    </div>
-                    <span class="palette-name">Harmonia</span>
-                </div>
-                <div class="palette-option" data-palette="health6">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #478A61;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #FCA264;"></div>
-                        <div class="palette-preview-accent" style="background-color: #A0C365;"></div>
-                    </div>
-                    <span class="palette-name">Natureza</span>
-                </div>
-                <div class="palette-option" data-palette="health7">
-                    <div class="palette-preview">
-                        <div class="palette-preview-primary" style="background-color: #5284b5;"></div>
-                        <div class="palette-preview-secondary" style="background-color: #a3bf74;"></div>
-                        <div class="palette-preview-accent" style="background-color: #8abbf6;"></div>
-                    </div>
-                    <span class="palette-name">Serenidade</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- Scripts -->
-        <script src="/assets/js/script.js"></script>
-        <script src="/assets/js/booking-modal.js"></script>
+    <!-- Scripts -->
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/booking-modal.js"></script>
 </body>
-
 </html>

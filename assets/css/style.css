@@ -201,6 +201,24 @@
     box-sizing: border-box;
 }
 
+/* -----------------------------
+ * Color Palettes
+ * ----------------------------- */
+
+ :root {
+    --primary: #006989;
+    --secondary: #E09F3E;
+    --accent: #9BC1BC;
+    --light: #FFF;
+    --dark: #27474E;
+    --text: #333;
+    --text-light: #FFF;
+    --hover-primary: #005670;
+    --hover-secondary: #CC8F2D;
+    --hover-accent: #88B0AB;
+    --shadow: rgb(0 105 137 / 15%);
+}
+
 body {
     font-size: 18px;
     font-family: Montserrat, sans-serif;
@@ -1459,125 +1477,5 @@ footer {
     text-align: center;
 }
 
-/* -----------------------------
- * Color Palettes
- * ----------------------------- */
 
-.palette-therapeutic {
-    --primary: #006989;
-    --secondary: #E09F3E;
-    --accent: #9BC1BC;
-    --light: #FFF;
-    --dark: #27474E;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #005670;
-    --hover-secondary: #CC8F2D;
-    --hover-accent: #88B0AB;
-    --shadow: rgb(0 105 137 / 15%);
-}
 
-/* Health 1 */
-.palette-health1 {
-    --primary: #569099;
-    --secondary: #f6d809;
-    --accent: #93c572;
-    --light: #a4dad2;
-    --dark: #3e7079;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #457883;
-    --hover-secondary: #e3c908;
-    --hover-accent: #83b162;
-    --shadow: rgb(86 144 153 / 15%);
-}
-
-/* Health 2 */
-.palette-health2 {
-    --primary: #5f9aae;
-    --secondary: #fff138;
-    --accent: #d1c2a5;
-    --light: #f2ead6;
-    --dark: #497685;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #4f8695;
-    --hover-secondary: #f0e228;
-    --hover-accent: #c1b295;
-    --shadow: rgb(95 154 174 / 15%);
-}
-
-/* Health 3 */
-.palette-health3 {
-    --primary: #1b5480;
-    --secondary: #f89b20;
-    --accent: #fce724;
-    --light: #FFF;
-    --dark: #0f3959;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #154368;
-    --hover-secondary: #e88c10;
-    --hover-accent: #f0db14;
-    --shadow: rgb(27 84 128 / 15%);
-}
-
-/* Health 4 */
-.palette-health4 {
-    --primary: #17375B;
-    --secondary: #E2BF65;
-    --accent: #92D6BB;
-    --light: #ECDFAB;
-    --dark: #0e2440;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #122c49;
-    --hover-secondary: #d2af55;
-    --hover-accent: #82c6ab;
-    --shadow: rgb(23 55 91 / 15%);
-}
-
-/* Health 5 */
-.palette-health5 {
-    --primary: #276868;
-    --secondary: #C95639;
-    --accent: #889930;
-    --light: #DFD7C4;
-    --dark: #1a4545;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #1e5252;
-    --hover-secondary: #b94c2f;
-    --hover-accent: #778320;
-    --shadow: rgb(39 104 104 / 15%);
-}
-
-/* Health 6 */
-.palette-health6 {
-    --primary: #478A61;
-    --secondary: #FCA264;
-    --accent: #A0C365;
-    --light: #A7E8D2;
-    --dark: #356a4a;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #3c7551;
-    --hover-secondary: #fc9245;
-    --hover-accent: #90b355;
-    --shadow: rgb(71 138 97 / 15%);
-}
-
-/* Health 7 */
-.palette-health7 {
-    --primary: #5284b5;
-    --secondary: #a3bf74;
-    --accent: #8abbf6;
-    --light: #cfe5fe;
-    --dark: #3a648a;
-    --text: #333;
-    --text-light: #FFF;
-    --hover-primary: #426b94;
-    --hover-secondary: #93af64;
-    --hover-accent: #7aabe6;
-    --shadow: rgb(82 132 181 / 15%);
-}
