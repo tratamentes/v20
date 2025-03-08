@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Função para aplicar a paleta selecionada
-    // Função para aplicar a paleta selecionada
     function applyPalette(paletteName) {
         // Remover todas as classes de paletas do elemento html
         document.documentElement.classList.remove(
@@ -102,6 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
         applyPalette(savedPalette);
     } else {
         // Se não houver paleta salva, usar 'palette-earthy' como padrão
-        applyPalette('palette-therapeutic');
+        applyPalette('palette-earthy');
     }
 });
