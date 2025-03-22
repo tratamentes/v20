@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - TrataMentes by João Goulart - Terapias e Massagens em Lisboa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         /* Estilos adicionais para a página de Serviços */
@@ -82,9 +86,12 @@
         }
 
         .benefits-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            line-height: 1.4;
+            letter-spacing: 0.01em;
         }
 
         .benefits-list {
@@ -160,88 +167,16 @@
             margin-bottom: 0.8rem;
         }
 
-        .faq-section {
-            background-color: white;
-            padding: 4rem 0;
-        }
-
-        .accordion {
-            margin-top: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .accordion-item {
-            background-color: var(--light);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
-        .accordion-header {
-            padding: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-weight: 600;
-            color: var(--primary);
-            transition: background-color 0.3s ease;
-        }
-
-        .accordion-header:hover {
-            background-color: rgba(0, 0, 0, 0.03);
-        }
-
-        .accordion-icon {
-            width: 20px;
-            height: 20px;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-icon::before,
-        .accordion-icon::after {
-            content: '';
-            position: absolute;
-            background-color: var(--accent);
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-icon::before {
-            width: 2px;
-            height: 20px;
-            left: 9px;
-            top: 0;
-        }
-
-        .accordion-icon::after {
-            width: 20px;
-            height: 2px;
-            left: 0;
-            top: 9px;
-        }
-
-        .accordion-item.active .accordion-icon::before {
-            transform: rotate(90deg);
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .accordion-item.active .accordion-content {
-            max-height: 500px;
-        }
-
-        .accordion-body {
-            padding: 0 1.2rem 1.2rem;
-        }
+@media (min-width: 1200px) {
+    .benefits-title {
+        font-size: 1.4rem; /* Ainda maior em telas grandes */
+    }
+}
 
         @media (max-width: 768px) {
+            .benefits-title {
+        font-size: 1.2rem; /* Ligeiramente menor em mobile, mas ainda bem legível */
+    }
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -264,7 +199,8 @@
                 <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre Mim</a></li>
                 <li class="nav-item"><a href="/servicos.html" class="nav-link">Serviços</a></li>
                 <li class="nav-item"><a href="/contacto.html" class="nav-link">Contacto</a></li>
-                <li class="nav-item"><a href="#" class="btn open-booking-modal">Agendar Consulta</a></li>
+                <li class="nav-item"><a href="#" class="btn open-booking-modal"
+                        data-service="massagem-terapeutica">Agendar Consulta</a></li>
             </ul>
         </div>
     </header>
@@ -282,15 +218,14 @@
         <div class="container">
             <div class="intro-services">
                 <h2 class="section-title">Uma Abordagem Integrativa para o Seu Bem-Estar</h2>
-                <p>As terapias manuais que ofereço são baseadas na compreensão de que o corpo funciona como um sistema
-                    integrado, onde cada parte influencia o todo. Através de técnicas precisas e personalizadas,
-                    trabalho para restaurar o equilíbrio natural do corpo, promovendo a autorregulação e o alívio de
-                    dores e desconfortos.</p>
+                <p>As terapias manuais que ofereço baseiam-se no entendimento de que o corpo funciona como um sistema
+                    integrado, em que cada parte influencia o todo. Através de técnicas precisas e personalizadas,
+                    trabalho para restaurar o equilíbrio natural do corpo, promovendo a autorregulação e aliviando a dor
+                    e o desconforto.</p>
                 <p>Cada técnica é cuidadosamente selecionada e adaptada às suas necessidades específicas, respeitando a
-                    singularidade do seu corpo e da sua condição. Independentemente do serviço escolhido, meu
+                    singularidade do seu corpo e da sua condição. Seja qual for o serviço que escolher, o meu
                     compromisso é proporcionar um tratamento profissional, respeitoso e eficaz.</p>
             </div>
-
             <!-- Grade de Serviços -->
             <div class="services-grid">
                 <!-- Massagem Terapêutica -->
@@ -305,12 +240,11 @@
                         </video>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">Massagem Terapêutica</h3>
+                        <div class="service-title">Massagem Terapêutica</div>
                         <p class="service-description">Uma abordagem personalizada que combina diferentes técnicas de
-                            massagem para aliviar tensões musculares, melhorar a circulação e promover relaxamento
-                            profundo. Adaptada às necessidades específicas de cada pessoa, a massagem terapêutica é
-                            eficaz para tratar dores musculares, stress e fadiga crônica.</p>
-
+                            massagem para aliviar a tensão muscular, melhorar a circulação e promover o relaxamento
+                            profundo. relaxamento. Adaptada às necessidades específicas de cada pessoa, a massagem
+                            terapêutica é eficaz para tratar as dores musculares, o stress e a fadiga crónica.</p>
                         <div class="service-benefits">
                             <h4 class="benefits-title">Benefícios:</h4>
                             <ul class="benefits-list">
@@ -339,7 +273,7 @@
                         </video>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">Terapia Crânio-Sacral</h3>
+                        <div class="service-title">Terapia Crânio-Sacral</div>
                         <p class="service-description">Uma abordagem suave e não invasiva que trabalha com o ritmo e o
                             movimento do sistema crânio-sacral para liberar tensões e restrições. Esta terapia é
                             particularmente eficaz para tratar problemas relacionados ao sistema nervoso, dores de
@@ -373,7 +307,7 @@
                         </video>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">Terapia Visceral</h3>
+                        <div class="service-title">Terapia Visceral</div>
                         <p class="service-description">Uma abordagem terapêutica que busca restaurar o movimento natural
                             dos órgãos internos através de técnicas manuais suaves. A terapia visceral é eficaz para
                             tratar problemas digestivos, respiratórios e dores que podem ser originadas de disfunções
@@ -407,7 +341,7 @@
                         </video>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">Reflexologia</h3>
+                        <div class="service-title">Reflexologia</div>
                         <p class="service-description">Uma técnica terapêutica baseada na estimulação de pontos
                             específicos nos pés, mãos ou orelhas que correspondem a diferentes órgãos e sistemas do
                             corpo. A reflexologia ajuda a restaurar o equilíbrio energético e promove o funcionamento
@@ -439,7 +373,7 @@
             <div class="approach-content">
                 <div class="approach-item">
                     <span class="approach-number">1</span>
-                    <h3 class="approach-title">Avaliação Inicial</h3>
+                    <div class="approach-title">Avaliação Inicial</div>
                     <p>Cada sessão começa com uma avaliação detalhada das suas necessidades e preocupações. Conversamos
                         sobre seu histórico de saúde, estilo de vida e expectativas para o tratamento, estabelecendo as
                         bases para um plano personalizado.</p>
@@ -447,7 +381,7 @@
 
                 <div class="approach-item">
                     <span class="approach-number">2</span>
-                    <h3 class="approach-title">Plano Terapêutico</h3>
+                    <div class="approach-title">Plano Terapêutico</div>
                     <p>Com base na avaliação, desenvolvo um plano terapêutico personalizado que combina as técnicas mais
                         adequadas para abordar suas necessidades específicas, visando resultados eficazes e duradouros.
                     </p>
@@ -455,7 +389,7 @@
 
                 <div class="approach-item">
                     <span class="approach-number">3</span>
-                    <h3 class="approach-title">Tratamento Integrativo</h3>
+                    <div class="approach-title">Tratamento Integrativo</div>
                     <p>As sessões de tratamento utilizam uma abordagem integrativa, combinando diferentes técnicas
                         terapêuticas para abordar não apenas os sintomas, mas também as causas subjacentes dos
                         desequilíbrios.</p>
@@ -463,7 +397,7 @@
 
                 <div class="approach-item">
                     <span class="approach-number">4</span>
-                    <h3 class="approach-title">Acompanhamento</h3>
+                    <div class="approach-title">Acompanhamento</div>
                     <p>Cada sessão inclui um momento de feedback e ajustes no plano conforme necessário. Além disso,
                         ofereço orientações sobre hábitos e práticas que podem complementar o tratamento e promover o
                         bem-estar contínuo.</p>
@@ -477,55 +411,82 @@
         <div class="container">
             <h2 class="section-title">Perguntas Frequentes sobre Serviços</h2>
             <div class="faq-container">
-                <div class="faq-item">
-                    <h3 class="faq-question">Qual serviço é mais indicado para o meu caso?</h3>
-                    <p class="faq-answer">A escolha do serviço mais adequado depende da sua condição específica, dos
-                        seus objetivos e das suas preferências pessoais. Na primeira consulta, efetuamos uma avaliação
-                        detalhada para identificar a abordagem mais eficaz para o seu caso. Muitas vezes, uma combinação
-                        de técnicas pode ser ideal para obter os melhores resultados.</p>
-                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">Qual serviço é mais indicado para o meu caso?
+                            <div class="faq-icon"></div>
+                        </div>
+                        <p class="faq-answer">A escolha do serviço mais adequado depende da sua condição específica, dos
+                            seus objetivos e das suas preferências pessoais. Na primeira consulta, efetuamos uma
+                            avaliação
+                            detalhada para identificar a abordagem mais eficaz para o seu caso. Muitas vezes, uma
+                            combinação
+                            de técnicas pode ser ideal para obter os melhores resultados.</p>
+                    </div>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Quais são as diferenças entre as terapias oferecidas?</h3>
-                    <p class="faq-answer">Cada terapia tem um foco e abordagem específicos: a Massagem Terapêutica
-                        trabalha diretamente com os tecidos musculares; a Terapia Crânio-Sacral foca no sistema
-                        crânio-sacral e sistema nervoso central; a Terapia Visceral trabalha com os órgãos internos e
-                        suas conexões; e a Reflexologia estimula pontos reflexos nos pés que correspondem a diferentes
-                        órgãos e sistemas. Durante a consulta inicial, posso explicar em detalhe como cada técnica pode
-                        beneficiar o seu caso específico.</p>
-                </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Quais são as diferenças entre as terapias oferecidas?<div
+                                class="faq-icon"></div>
+                        </div>
+                        <p class="faq-answer">Cada terapia tem um foco e abordagem específicos: a Massagem Terapêutica
+                            trabalha diretamente com os tecidos musculares; a Terapia Crânio-Sacral foca no sistema
+                            crânio-sacral e sistema nervoso central; a Terapia Visceral trabalha com os órgãos internos
+                            e
+                            suas conexões; e a Reflexologia estimula pontos reflexos nos pés que correspondem a
+                            diferentes
+                            órgãos e sistemas. Durante a consulta inicial, posso explicar em detalhe como cada técnica
+                            pode
+                            beneficiar o seu caso específico.</p>
+                    </div>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">As terapias são dolorosas?</h3>
-                    <p class="faq-answer">As técnicas que utilizo são geralmente suaves e não causam desconforto
-                        significativo. Em casos específicos, pode haver alguma sensibilidade em áreas de tensão ou dor
-                        pré-existente, mas trabalho sempre dentro dos limites de conforto de cada pessoa, ajustando a
-                        pressão e a abordagem conforme necessário. O objetivo é sempre o de proporcionar uma experiência
-                        terapêutica agradável e relaxante.</p>
-                </div>
+                    <div class="faq-item">
+                        <div class="faq-question">As terapias são dolorosas?<div class="faq-icon"></div>
+                        </div>
+                        <p class="faq-answer">As técnicas que utilizo são geralmente suaves e não causam desconforto
+                            significativo. Em casos específicos, pode haver alguma sensibilidade em áreas de tensão ou
+                            dor
+                            pré-existente, mas trabalho sempre dentro dos limites de conforto de cada pessoa, ajustando
+                            a
+                            pressão e a abordagem conforme necessário. O objetivo é sempre o de proporcionar uma
+                            experiência
+                            terapêutica agradável e relaxante.</p>
+                    </div>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Quantas sessões são necessárias para ver resultados?</h3>
-                    <p class="faq-answer">Cada pessoa reage de forma única ao tratamento. Alguns pacientes relatam um
-                        alívio imediato após a primeira sessão, enquanto condições mais crónicas podem exigir um plano
-                        de tratamento mais longo. Após a avaliação inicial, posso fornecer uma estimativa mais exata
-                        para o seu caso específico.</p>
-                </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Quantas sessões são necessárias para ver resultados?<div
+                                class="faq-icon"></div>
+                        </div>
+                        <p class="faq-answer">Cada pessoa reage de forma única ao tratamento. Alguns pacientes relatam
+                            um
+                            alívio imediato após a primeira sessão, enquanto condições mais crónicas podem exigir um
+                            plano
+                            de tratamento mais longo. Após a avaliação inicial, posso fornecer uma estimativa mais exata
+                            para o seu caso específico.</p>
+                    </div>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">É possível combinar diferentes terapias numa só sessão?</h3>
-                    <p class="faq-answer">Sim, a minha abordagem é integrativa. Frequentemente, combino diferentes
-                        técnicas numa mesma sessão para proporcionar o melhor resultado possível. O plano de tratamento
-                        é personalizado com base nas suas necessidades específicas e pode incluir elementos de várias
-                        modalidades terapêuticas.</p>
-                </div>
+                    <div class="faq-item">
+                        <div class="faq-question">É possível combinar diferentes terapias numa só sessão?<div
+                                class="faq-icon"></div>
+                        </div>
+                        <p class="faq-answer">Sim, a minha abordagem é integrativa. Frequentemente, combino diferentes
+                            técnicas numa mesma sessão para proporcionar o melhor resultado possível. O plano de
+                            tratamento
+                            é personalizado com base nas suas necessidades específicas e pode incluir elementos de
+                            várias
+                            modalidades terapêuticas.</p>
+                    </div>
 
-                <div class="faq-item">
-                    <h3 class="faq-question">Quanto tempo devo esperar entre as sessões?</h3>
-                    <p class="faq-answer">O intervalo ideal entre sessões varia conforme a condição tratada e a resposta
-                        individual ao tratamento. Em casos agudos, sessões semanais podem ser recomendadas inicialmente.
-                        Para manutenção e prevenção, sessões quinzenais ou mensais podem ser mais adequadas. Após a
-                        avaliação inicial, desenvolvemos juntos um plano que melhor atenda às suas necessidades.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">Quanto tempo devo esperar entre as sessões?<div class="faq-icon">
+                            </div>
+                        </div>
+                        <p class="faq-answer">O intervalo ideal entre sessões varia conforme a condição tratada e a
+                            resposta
+                            individual ao tratamento. Em casos agudos, sessões semanais podem ser recomendadas
+                            inicialmente.
+                            Para manutenção e prevenção, sessões quinzenais ou mensais podem ser mais adequadas. Após a
+                            avaliação inicial, desenvolvemos juntos um plano que melhor atenda às suas necessidades.</p>
+                    </div>
                 </div>
             </div>
         </div>
